@@ -35,12 +35,12 @@ export function UeberUns() {
           <p className="text-muted-fg leading-relaxed">{ueberUns.text}</p>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
-          <div className="group relative aspect-square rounded-lg overflow-hidden shadow-lg">
+          <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
             <Image
               src={ueberUns.zirkelImage}
               alt="Zirkel des KStV Ravensberg"
               fill
-              className="object-contain transition-transform duration-500 ease-out group-hover:scale-105"
+              className="object-contain"
               unoptimized
             />
           </div>
@@ -62,15 +62,14 @@ export function UeberUns() {
       {/* History text alongside historical photo (reversed order) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <ScrollReveal delay={0.15}>
-          <div className="group relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
             <Image
               src={ueberUns.historischImage}
               alt="Historisches Foto des KStV Ravensberg"
               fill
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+              className="object-cover"
               unoptimized
             />
-            <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
           </div>
         </ScrollReveal>
         <ScrollReveal>

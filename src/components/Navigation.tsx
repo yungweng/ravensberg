@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { navigation } from "@/data/content";
 
 export function Navigation() {
@@ -56,10 +57,18 @@ export function Navigation() {
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a
           href="#"
-          className={`font-serif text-xl font-bold transition-colors duration-300 ${
+          className={`flex items-center gap-2 font-serif text-xl font-bold transition-colors duration-300 ${
             scrolled ? "text-foreground" : "text-white"
           }`}
         >
+          <Image
+            src="/images/wappen/kleines-wappen.png"
+            alt="Wappen KStV Ravensberg"
+            width={32}
+            height={38}
+            className="h-8 w-auto"
+            unoptimized
+          />
           KStV Ravensberg
         </a>
 

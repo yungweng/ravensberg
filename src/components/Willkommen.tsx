@@ -25,15 +25,14 @@ export function Willkommen() {
           </div>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
-          <div className="group relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
             <Image
               src={willkommen.image}
               alt="KStV Ravensberg Gruppenfoto"
               fill
-              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+              className="object-cover"
               unoptimized
             />
-            <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
           </div>
         </ScrollReveal>
       </div>

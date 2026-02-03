@@ -10,16 +10,15 @@ interface PrinzipCardProps {
 export function PrinzipCard({ prinzip, delay = 0 }: PrinzipCardProps) {
   return (
     <ScrollReveal delay={delay}>
-      <div className="group rounded-lg overflow-hidden bg-background transition-shadow duration-300 hover:shadow-lg">
+      <div className="rounded-lg overflow-hidden bg-background transition-shadow duration-300 hover:shadow-lg">
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={prinzip.image}
             alt={prinzip.name}
             fill
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+            className="object-cover"
             unoptimized
           />
-          <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
         </div>
         <div className="p-5">
           <h3 className="font-serif text-xl text-accent mb-2">{prinzip.name}</h3>

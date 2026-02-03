@@ -34,7 +34,7 @@ export const ueberUns = {
   text: "Wir, der Katholische Studentenverein Ravensberg zu Münster, sind eine Gemeinschaft von Studierenden und ehemaligen Studierenden, die seit über hundert Jahren durch gemeinsame Werte, Traditionen und echte Freundschaft verbunden sind. Als Teil des Kartellverbands katholischer deutscher Studentenvereine (KV) stehen wir für die Prinzipien Religio, Scientia und Amicitia — also für Glaube, Wissenschaft und Freundschaft. Unser Wahlspruch lautet \u201EVorwärts! Aufwärts!\u201C.",
   history: "Unser Verein wurde am 22. Juni 1919, kurz nach dem Ende des Ersten Weltkriegs, als Katholischer Studentenverein in Münster gegründet. Die Gründung fiel in eine Zeit des gesellschaftlichen Umbruchs: Die junge Weimarer Republik suchte nach Orientierung, und katholische Studierende wollten eine Gemeinschaft schaffen, die ihnen Halt, Bildung und Zusammenhalt bot. Von Beginn an war der KStV Ravensberg dem Kartellverband (KV) angeschlossen und teilte dessen Ideale einer nichtschlagenden, farbenführenden Verbindung.",
   zirkelImage: "/images/wappen/zirkel.png",
-  historischImage: "/images/geschichte/historisch.jpg",
+  historischImage: "/images/geschichte/bildband-1919-gruendung.jpg",
   redeImage: "/images/veranstaltungen/winterfest-rede.jpg",
   wahlspruch: "\u201EVorwärts! Aufwärts!\u201C",
 };

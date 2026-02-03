@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/data/content";
@@ -22,7 +23,17 @@ export function Footer() {
             animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0 }}
           >
-            <h3 className="font-serif text-xl mb-2">{siteConfig.fullName}</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <Image
+                src="/images/wappen/kleines-wappen.png"
+                alt="Wappen KStV Ravensberg"
+                width={40}
+                height={48}
+                className="h-10 w-auto"
+                unoptimized
+              />
+              <h3 className="font-serif text-xl">{siteConfig.fullName}</h3>
+            </div>
             <p className="text-background/60 text-sm">Seit 1919</p>
           </motion.div>
 

@@ -9,15 +9,14 @@ export function UnserHaus() {
     <Section id="unser-haus" fullBleed bgClassName="bg-muted">
       {/* Full-bleed hero image of house exterior */}
       <ScrollReveal>
-        <div className="group relative aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden">
           <Image
             src={unserHaus.image}
             alt="Haus des KStV Ravensberg"
             fill
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            className="object-cover"
             unoptimized
           />
-          <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/8 transition-colors duration-500" />
         </div>
       </ScrollReveal>
 
@@ -41,15 +40,14 @@ export function UnserHaus() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {unserHaus.raeume.images.map((image, index) => (
             <ScrollReveal key={image} delay={0.1 + index * 0.1}>
-              <div className="group relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={image}
                   alt={`Raum ${index + 1}`}
                   fill
-                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  className="object-cover"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
               </div>
             </ScrollReveal>
           ))}

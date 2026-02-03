@@ -25,6 +25,6 @@ export const vorstand: VorstandMember[] = [
     role: "Fuxmajor (FM)",
     image: "/images/vorstand/elias-sanders.png",
     description:
-      "Als Fuxmajor begleite ich die neuen Mitglieder in ihren ersten Semestern. Ich bringe ihnen unsere Traditionen und Geschichte nahe und sorge dafür, dass sie sich in der Gemeinschaft zurechtfinden — denn gerade der Anfang entscheidet, ob aus Interesse echte Zugehörigkeit wird.",
+      "Als Fuxmajor begleite ich die neuen Mitglieder in ihren ersten Semestern. Ich bringe ihnen unsere Traditionen und Geschichte nahe und sorge dafür, dass aus Interesse echte Zugehörigkeit wird.",
   },
 ];

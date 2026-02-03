@@ -13,7 +13,7 @@ export default function ImpressumPage() {
             Angaben gem&auml;&szlig; &sect; 5 TMG / &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            Verein Alter Ravensberger
+            Verein Alter M&uuml;nsterischer Ravensberger e.V.
             <br />
             Raesfeldstra&szlig;e 32
             <br />
@@ -26,9 +26,9 @@ export default function ImpressumPage() {
             Vertreten durch
           </h2>
           <p>
-            Den jeweiligen Vorstand des Vereins Alter Ravensberger.
+            Den jeweiligen Vorstand des Vereins Alter M&uuml;nsterischer Ravensberger e.V.
             <br />
-            Kontakt: vorstand@kstvravensberg.de
+            Kontakt: vorstand@kstv-ravensberg.de
           </p>
         </section>
 
@@ -37,10 +37,10 @@ export default function ImpressumPage() {
           <p>
             E-Mail:{" "}
             <a
-              href="mailto:vorstand@kstvravensberg.de"
+              href="mailto:vorstand@kstv-ravensberg.de"
               className="text-accent hover:underline"
             >
-              vorstand@kstvravensberg.de
+              vorstand@kstv-ravensberg.de
             </a>
           </p>
         </section>
@@ -50,7 +50,7 @@ export default function ImpressumPage() {
             Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            Verein Alter Ravensberger
+            Verein Alter M&uuml;nsterischer Ravensberger e.V.
             <br />
             Raesfeldstra&szlig;e 32
             <br />

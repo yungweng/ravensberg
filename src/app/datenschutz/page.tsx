@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
             1. Verantwortlicher
           </h2>
           <p>
-            Verein Alter Ravensberger
+            Verein Alter M&uuml;nsterischer Ravensberger e.V.
             <br />
             Raesfeldstra&szlig;e 32
             <br />
@@ -22,10 +22,10 @@ export default function DatenschutzPage() {
             <br />
             E-Mail:{" "}
             <a
-              href="mailto:vorstand@kstvravensberg.de"
+              href="mailto:vorstand@kstv-ravensberg.de"
               className="text-accent hover:underline"
             >
-              vorstand@kstvravensberg.de
+              vorstand@kstv-ravensberg.de
             </a>
           </p>
         </section>

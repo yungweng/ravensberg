@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FDF8F0;
+  --color-foreground: #2C1810;
+  --color-accent: #8B7324;
+  --color-muted: #F5EDE0;
+  --color-muted-fg: #6B5D4F;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-script: var(--font-great-vibes), cursive;
+}

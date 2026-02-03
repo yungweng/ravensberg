@@ -42,7 +42,7 @@ export function Hero() {
           }}
         >
           <Image
-            src="/images/hero/haus-exterior.jpg"
+            src="/images/haus/haus-exterior.webp"
             alt="KStV Ravensberg Haus"
             fill
             className="object-cover"

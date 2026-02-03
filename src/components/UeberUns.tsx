@@ -45,7 +45,7 @@ export function UeberUns() {
           <div className="flex justify-center">
             <div className="relative w-64 h-72">
               <Image
-                src="/images/wappen/vollwappen.png"
+                src="/images/wappen/vollwappen.webp"
                 alt="Vollwappen des KStV Ravensberg"
                 fill
                 className="object-contain"
@@ -77,11 +77,11 @@ export function UeberUns() {
           <figure>
             <button
               type="button"
-              onClick={() => setLightbox({ src: "/images/geschichte/haus-zeichnung.png", alt: "Historische Zeichnung des Ravensberg-Hauses" })}
+              onClick={() => setLightbox({ src: "/images/geschichte/haus-zeichnung.webp", alt: "Historische Zeichnung des Ravensberg-Hauses" })}
               className="relative aspect-[4/3] rounded-lg overflow-hidden block w-full cursor-pointer group"
             >
               <Image
-                src="/images/geschichte/haus-zeichnung.png"
+                src="/images/geschichte/haus-zeichnung.webp"
                 alt="Historische Zeichnung des Ravensberg-Hauses"
                 fill
                 className="object-contain transition-[filter] duration-300 group-hover:brightness-90"

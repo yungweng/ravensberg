@@ -9,14 +9,14 @@ import { Lightbox } from "@/components/Lightbox";
 import { siteConfig } from "@/data/content";
 
 const galleryImages = [
-  { src: "/images/veranstaltungen/winterfest-chargierten.jpg", alt: "Chargierten in vollem Wichs" },
-  { src: "/images/veranstaltungen/winterfest-kneipe.jpg", alt: "Kneipe bei Kerzenschein" },
-  { src: "/images/veranstaltungen/winterfest-stehen.jpg", alt: "Gemeinschaft beim Winterfest" },
-  { src: "/images/veranstaltungen/winterfest-gesang.jpg", alt: "Gesang bei der Kneipe" },
-  { src: "/images/geschichte/bildband-1919-gruendung.jpg", alt: "Gründungssemester 1919" },
-  { src: "/images/veranstaltungen/winterfest-tisch.jpg", alt: "Gemütliches Beisammensein" },
-  { src: "/images/veranstaltungen/winterfest-rede.jpg", alt: "Rede beim Winterfest" },
-  { src: "/images/geschichte/bildband-1919-gruppen.jpg", alt: "Historische Gruppenfotos" },
+  { src: "/images/veranstaltungen/winterfest-chargierten.webp", alt: "Chargierten in vollem Wichs" },
+  { src: "/images/veranstaltungen/winterfest-kneipe.webp", alt: "Kneipe bei Kerzenschein" },
+  { src: "/images/veranstaltungen/winterfest-stehen.webp", alt: "Gemeinschaft beim Winterfest" },
+  { src: "/images/veranstaltungen/winterfest-gesang.webp", alt: "Gesang bei der Kneipe" },
+  { src: "/images/geschichte/bildband-1919-gruendung.webp", alt: "Gründungssemester 1919" },
+  { src: "/images/veranstaltungen/winterfest-tisch.webp", alt: "Gemütliches Beisammensein" },
+  { src: "/images/veranstaltungen/winterfest-rede.webp", alt: "Rede beim Winterfest" },
+  { src: "/images/geschichte/bildband-1919-gruppen.webp", alt: "Historische Gruppenfotos" },
 ];
 
 export function InstagramFeed() {

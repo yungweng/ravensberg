@@ -62,7 +62,7 @@ export function Navigation() {
           }`}
         >
           <Image
-            src="/images/wappen/kleines-wappen.png"
+            src="/images/wappen/kleines-wappen.webp"
             alt="Wappen KStV Ravensberg"
             width={32}
             height={38}

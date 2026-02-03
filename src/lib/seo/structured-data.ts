@@ -5,7 +5,7 @@ export function generateOrganizationSchema() {
     name: "KStV Ravensberg zu Münster",
     alternateName: "KStV Ravensberg",
     url: "https://kstvravensberg.de",
-    logo: "https://kstvravensberg.de/images/wappen/wappen.png",
+    logo: "https://kstvravensberg.de/images/wappen/wappen.webp",
     description:
       "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919.",
     address: {

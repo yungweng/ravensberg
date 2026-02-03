@@ -1,0 +1,93 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import { useReducedMotion } from "framer-motion";
+import {
+  einblickeRow1,
+  einblickeRow2,
+  einblickeRow3,
+  type EinblickeImage,
+} from "@/data/einblicke";
+import { Lightbox } from "@/components/Lightbox";
+
+function MarqueeRow({
+  images,
+  reverse,
+  onImageClick,
+}: {
+  images: EinblickeImage[];
+  reverse?: boolean;
+  onImageClick: (img: EinblickeImage) => void;
+}) {
+  const prefersReducedMotion = useReducedMotion();
+  const animationName = reverse ? "marquee-scroll-reverse" : "marquee-scroll";
+
+  return (
+    <div className="overflow-hidden marquee-container">
+      <div
+        className="flex gap-3 w-max marquee-strip"
+        style={{
+          animation: prefersReducedMotion
+            ? "none"
+            : `${animationName} 120s linear infinite`,
+        }}
+      >
+        {[...images, ...images].map((img, i) => (
+          <button
+            type="button"
+            key={`${img.src}-${i}`}
+            onClick={() => onImageClick(img)}
+            className="relative flex-shrink-0 h-[220px] md:h-[280px] aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group/img"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover transition-[filter] duration-300 group-hover/img:brightness-75"
+              unoptimized
+            />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
+              <svg
+                aria-hidden="true"
+                className="w-8 h-8 text-white drop-shadow-lg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export function EinblickeCarousel() {
+  const [lightbox, setLightbox] = useState<EinblickeImage | null>(null);
+
+  return (
+    <>
+      <div className="w-screen relative left-1/2 -translate-x-1/2 flex flex-col gap-3">
+        <MarqueeRow images={einblickeRow1} onImageClick={setLightbox} />
+        <MarqueeRow images={einblickeRow2} reverse onImageClick={setLightbox} />
+        <MarqueeRow images={einblickeRow3} onImageClick={setLightbox} />
+      </div>
+
+      <Lightbox
+        src={lightbox?.src ?? ""}
+        alt={lightbox?.alt ?? ""}
+        isOpen={lightbox !== null}
+        onClose={() => setLightbox(null)}
+      />
+    </>
+  );
+}

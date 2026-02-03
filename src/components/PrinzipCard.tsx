@@ -16,9 +16,10 @@ export function PrinzipCard({ prinzip, delay = 0 }: PrinzipCardProps) {
             src={prinzip.image}
             alt={prinzip.name}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
             unoptimized
           />
+          <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
         </div>
         <div className="p-5">
           <h3 className="font-serif text-xl text-accent mb-2">{prinzip.name}</h3>

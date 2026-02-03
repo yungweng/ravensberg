@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
+const titleText = "KStV Ravensberg";
+
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -15,19 +17,39 @@ export function Hero() {
 
   return (
     <div ref={ref} className="relative h-screen w-full overflow-hidden">
-      {/* Background image with parallax */}
+      {/* Background image with Ken Burns effect */}
       <motion.div
         className="absolute inset-0"
         style={prefersReducedMotion ? {} : { y: backgroundY }}
       >
-        <Image
-          src="/images/hero/haus-exterior.jpg"
-          alt="KStV Ravensberg Haus"
-          fill
-          className="object-cover"
-          priority
-          unoptimized
-        />
+        <motion.div
+          className="absolute inset-0"
+          initial={{ scale: 1, x: 0, y: 0 }}
+          animate={
+            prefersReducedMotion
+              ? {}
+              : {
+                  scale: 1.15,
+                  x: 15,
+                  y: -10,
+                }
+          }
+          transition={{
+            duration: 25,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+        >
+          <Image
+            src="/images/hero/haus-exterior.jpg"
+            alt="KStV Ravensberg Haus"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+        </motion.div>
       </motion.div>
 
       {/* Gradient overlay */}
@@ -35,19 +57,35 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <motion.h1
-          className="font-script text-5xl md:text-7xl lg:text-8xl text-white"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          KStV Ravensberg
-        </motion.h1>
+        <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-white">
+          <span className="sr-only">{titleText}</span>
+          <span aria-hidden="true">
+            {titleText.split("").map((char, i) => (
+              <motion.span
+                key={i}
+                className="inline-block"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: prefersReducedMotion ? 0 : 0.3 + i * 0.06,
+                  ease: "easeOut",
+                }}
+                style={char === " " ? { width: "0.3em" } : undefined}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </span>
+        </h1>
         <motion.p
           className="font-serif text-xl md:text-2xl text-white/80 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{
+            duration: 1,
+            delay: prefersReducedMotion ? 0 : 0.3 + titleText.length * 0.06 + 0.3,
+          }}
         >
           zu Münster
         </motion.p>

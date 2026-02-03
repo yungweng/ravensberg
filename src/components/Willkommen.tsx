@@ -2,26 +2,38 @@ import Image from "next/image";
 import { willkommen } from "@/data/content";
 import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { AnimatedHeading } from "@/components/AnimatedHeading";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 export function Willkommen() {
+  const currentYear = new Date().getFullYear();
+  const yearsOfTradition = currentYear - 1919;
+
   return (
     <Section id="willkommen">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <ScrollReveal>
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+          <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-6">
             {willkommen.heading}
-          </h2>
-          <p className="text-muted-fg leading-relaxed">{willkommen.text}</p>
+          </AnimatedHeading>
+          <p className="text-muted-fg leading-relaxed mb-8">{willkommen.text}</p>
+          <div className="flex items-baseline gap-2">
+            <span className="font-serif text-4xl text-accent">
+              <AnimatedCounter target={yearsOfTradition} suffix="+" />
+            </span>
+            <span className="text-muted-fg text-sm">Jahre Tradition seit 1919</span>
+          </div>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+          <div className="group relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
             <Image
               src={willkommen.image}
               alt="KStV Ravensberg Gruppenfoto"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
               unoptimized
             />
+            <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500" />
           </div>
         </ScrollReveal>
       </div>

@@ -1,19 +1,37 @@
+"use client";
+
 import Link from "next/link";
+import { useRef } from "react";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/data/content";
 
 export function Footer() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
+  const prefersReducedMotion = useReducedMotion();
+
+  const shouldAnimate = !prefersReducedMotion && isInView;
+
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-foreground text-background" ref={ref}>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Column 1: Name and founding */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0 }}
+          >
             <h3 className="font-serif text-xl mb-2">{siteConfig.fullName}</h3>
             <p className="text-background/60 text-sm">Seit 1919</p>
-          </div>
+          </motion.div>
 
           {/* Column 2: Contact */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-3 text-background/80">
               Kontakt
             </h4>
@@ -23,10 +41,14 @@ export function Footer() {
             >
               {siteConfig.email}
             </a>
-          </div>
+          </motion.div>
 
           {/* Column 3: Social */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-3 text-background/80">
               Folge uns
             </h4>
@@ -52,15 +74,22 @@ export function Footer() {
               </svg>
               {siteConfig.instagramHandle}
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Tricolor stripe — Verbindung flag colors */}
-      <div className="flex h-[3px]">
-        <div className="flex-1" style={{ backgroundColor: "#1B5E20" }} />
-        <div className="flex-1" style={{ backgroundColor: "#F9A825" }} />
-        <div className="flex-1" style={{ backgroundColor: "#B71C1C" }} />
+      {/* Tricolor stripe — animated from left to right */}
+      <div className="flex h-[3px] overflow-hidden">
+        <motion.div
+          className="flex h-full w-full"
+          initial={{ x: "-100%" }}
+          animate={shouldAnimate ? { x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        >
+          <div className="flex-1" style={{ backgroundColor: "#1B5E20" }} />
+          <div className="flex-1" style={{ backgroundColor: "#F9A825" }} />
+          <div className="flex-1" style={{ backgroundColor: "#B71C1C" }} />
+        </motion.div>
       </div>
 
       {/* Bottom bar */}

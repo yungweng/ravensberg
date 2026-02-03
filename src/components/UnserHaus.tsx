@@ -16,15 +16,35 @@ export function UnserHaus() {
     <Section id="unser-haus" fullBleed bgClassName="bg-muted">
       {/* Full-bleed hero image of house exterior */}
       <ScrollReveal>
-        <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+        <button
+          type="button"
+          onClick={() => setLightbox({ src: unserHaus.image, alt: "Haus des KStV Ravensberg" })}
+          className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden block w-full cursor-pointer group"
+        >
           <Image
             src={unserHaus.image}
             alt="Haus des KStV Ravensberg"
             fill
-            className="object-cover"
+            className="object-cover transition-[filter] duration-300 group-hover:brightness-75"
             unoptimized
           />
-        </div>
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <svg
+              className="w-8 h-8 text-white drop-shadow-lg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" />
+            </svg>
+          </div>
+        </button>
       </ScrollReveal>
 
       {/* Centered text content */}

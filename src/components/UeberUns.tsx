@@ -38,18 +38,18 @@ export function UeberUns() {
       <ScrollReveal>
         <blockquote className="text-center my-16 py-8 border-t border-b border-accent/30">
           <p className="font-serif text-2xl md:text-3xl text-accent italic">
-            &bdquo;Vorw&auml;rts! Aufw&auml;rts!&ldquo;
+            {ueberUns.wahlspruch}
           </p>
-          <span className="text-muted-fg text-sm mt-3 block">
+          <footer className="text-muted-fg text-sm mt-3 block">
             Wahlspruch des KStV Ravensberg
-          </span>
+          </footer>
         </blockquote>
       </ScrollReveal>
 
       {/* History text alongside historical photo (reversed order) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <ScrollReveal delay={0.15}>
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg md:order-first">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
             <Image
               src={ueberUns.historischImage}
               alt="Historisches Foto des KStV Ravensberg"

@@ -36,6 +36,7 @@ export const ueberUns = {
   zirkelImage: "/images/geschichte/zirkel.webp",
   historischImage: "/images/geschichte/historisch.jpg",
   redeImage: "/images/geschichte/rede.png",
+  wahlspruch: "\u201EVorwärts! Aufwärts!\u201C",
 };
 
 export const navigation = [

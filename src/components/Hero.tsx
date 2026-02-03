@@ -62,6 +62,7 @@ export function Hero() {
           <span aria-hidden="true">
             {titleText.split("").map((char, i) => (
               <motion.span
+                // biome-ignore lint/suspicious/noArrayIndexKey: static character list from constant string, never reordered
                 key={i}
                 className="inline-block"
                 initial={{ opacity: 0, y: 10 }}
@@ -98,6 +99,7 @@ export function Hero() {
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
         <svg
+          aria-hidden="true"
           width="24"
           height="24"
           viewBox="0 0 24 24"

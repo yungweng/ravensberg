@@ -41,6 +41,9 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
           transition={{ duration: 0.2 }}
         >
           {/* Backdrop */}
+          {/* biome-ignore lint/a11y/noStaticElementInteractions: backdrop click-to-close is standard lightbox UX */}
+          {/* biome-ignore lint/a11y/useKeyWithClickEvents: keyboard close handled via Escape key listener */}
+          {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: backdrop close is supplementary to the close button */}
           <div
             className="absolute inset-0 bg-black/90 cursor-pointer"
             onClick={onClose}
@@ -48,11 +51,13 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
 
           {/* Close button */}
           <button
+            type="button"
             onClick={onClose}
             className="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white transition-colors z-10"
             aria-label="Schließen"
           >
             <svg
+              aria-hidden="true"
               className="w-8 h-8"
               viewBox="0 0 24 24"
               fill="none"

@@ -26,6 +26,7 @@ export function AnimatedHeading({ children, as: Tag = "h2", className = "" }: An
       <span aria-hidden="true">
         {words.map((word, i) => (
           <motion.span
+            // biome-ignore lint/suspicious/noArrayIndexKey: static word list from heading text, never reordered
             key={`${word}-${i}`}
             className="inline-block mr-[0.25em]"
             initial={{ opacity: 0, y: 20 }}

@@ -30,6 +30,7 @@ export function UnserHaus() {
           />
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <svg
+              aria-hidden="true"
               className="w-8 h-8 text-white drop-shadow-lg"
               viewBox="0 0 24 24"
               fill="none"
@@ -81,6 +82,7 @@ export function UnserHaus() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <svg
+                    aria-hidden="true"
                     className="w-8 h-8 text-white drop-shadow-lg"
                     viewBox="0 0 24 24"
                     fill="none"

@@ -10,7 +10,8 @@ Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-beari
 
 - `bun run dev` — local dev server (http://localhost:3000)
 - `bun run build` — static export to `/out` directory
-- `bun run lint` — ESLint
+- `bun run lint` — Biome lint
+- `bun run lint:fix` — Biome lint with auto-fix
 
 No test framework is configured. Verify changes with `bun run build` (must produce `/out` with no errors).
 

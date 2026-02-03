@@ -56,7 +56,7 @@ export function Navigation() {
     >
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a
-          href="#"
+          href="#hero"
           className={`flex items-center gap-2 font-serif text-xl font-bold transition-colors duration-300 ${
             scrolled ? "text-foreground" : "text-white"
           }`}
@@ -99,6 +99,7 @@ export function Navigation() {
 
         {/* Mobile hamburger */}
         <button
+          type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
           className={`md:hidden flex flex-col gap-1.5 p-2 transition-colors ${
             scrolled ? "text-foreground" : "text-white"

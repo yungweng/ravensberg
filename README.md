@@ -25,7 +25,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 |---------|-------------|
 | `bun run dev` | Start dev server |
 | `bun run build` | Static export to `/out` |
-| `bun run lint` | Run ESLint |
+| `bun run lint` | Run Biome lint |
+| `bun run lint:fix` | Run Biome lint with auto-fix |
 
 ## Updating Content
 

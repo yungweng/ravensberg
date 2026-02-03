@@ -34,6 +34,8 @@ export function TiltCard({ children, className = "" }: TiltCardProps) {
   }
 
   return (
+    // biome-ignore lint/a11y/noStaticElementInteractions: purely visual tilt effect, no semantic interaction
+    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: mouse-only visual effect with reduced-motion fallback
     <div
       ref={ref}
       onMouseMove={handleMouseMove}

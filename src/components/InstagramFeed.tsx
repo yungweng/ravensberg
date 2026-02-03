@@ -50,6 +50,7 @@ export function InstagramFeed() {
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <svg
+                  aria-hidden="true"
                   className="w-8 h-8 text-white drop-shadow-lg"
                   viewBox="0 0 24 24"
                   fill="none"
@@ -80,6 +81,7 @@ export function InstagramFeed() {
           className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-lg font-medium hover:bg-foreground/90 transition-colors"
         >
           <svg
+            aria-hidden="true"
             className="w-5 h-5"
             viewBox="0 0 24 24"
             fill="none"

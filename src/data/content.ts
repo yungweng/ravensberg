@@ -10,7 +10,7 @@ export const siteConfig = {
 export const willkommen = {
   heading: "Willkommen beim K.St.V. Ravensberg!",
   text: "Wir sind eine Katholische, nichtschlagende und farbenführende Studentenverbindung an der Universität Münster. Seit unserer Gründung im Jahr 1919 stehen wir für Gemeinschaft, Verantwortung und lebenslange Freundschaft. Bei uns treffen Tradition und modernes Studentenleben aufeinander: Wir sind der Meinung, dass Studium mehr ist als nur Lernen — es ist eine Zeit, in der Freundschaften fürs Leben entstehen und Werte wachsen, wenn man gemeinsam etwas gestaltet. Unser Verein bietet Studierenden eine Gemeinschaft, die über das Studium hinaus trägt. Im Mittelpunkt stehen unsere drei Prinzipien, die unser Handeln und Miteinander prägen: Religio, Scientia und Amicitia.",
-  image: "/images/general/gruppenfoto.jpg",
+  image: "/images/veranstaltungen/winterfest-stehen.jpg",
 };
 
 export const unserHaus = {

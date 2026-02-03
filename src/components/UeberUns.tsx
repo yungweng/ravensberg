@@ -7,6 +7,7 @@ import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { Lightbox } from "@/components/Lightbox";
+import { richText } from "@/lib/richText";
 
 export function UeberUns() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
@@ -38,7 +39,7 @@ export function UeberUns() {
       {/* Main text alongside Vollwappen */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
         <ScrollReveal>
-          <p className="text-muted-fg leading-relaxed">{ueberUns.text}</p>
+          <p className="text-muted-fg leading-relaxed">{richText(ueberUns.text)}</p>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <div className="flex justify-center">
@@ -70,7 +71,7 @@ export function UeberUns() {
       {/* History: house drawing + text, then historical photo */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
         <ScrollReveal>
-          <p className="text-muted-fg leading-relaxed">{ueberUns.history}</p>
+          <p className="text-muted-fg leading-relaxed">{richText(ueberUns.history)}</p>
         </ScrollReveal>
         <ScrollReveal delay={0.15}>
           <figure>

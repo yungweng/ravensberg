@@ -7,6 +7,7 @@ import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { Lightbox } from "@/components/Lightbox";
+import { richText } from "@/lib/richText";
 
 export function UnserHaus() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
@@ -33,7 +34,7 @@ export function UnserHaus() {
             <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-6">
               {unserHaus.heading}
             </AnimatedHeading>
-            <p className="text-muted-fg leading-relaxed">{unserHaus.text}</p>
+            <p className="text-muted-fg leading-relaxed">{richText(unserHaus.text)}</p>
           </div>
         </ScrollReveal>
 

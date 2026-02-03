@@ -4,6 +4,7 @@ import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { richText } from "@/lib/richText";
 
 export function Willkommen() {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,7 @@ export function Willkommen() {
           <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-6">
             {willkommen.heading}
           </AnimatedHeading>
-          <p className="text-muted-fg leading-relaxed mb-8">{willkommen.text}</p>
+          <p className="text-muted-fg leading-relaxed mb-8">{richText(willkommen.text)}</p>
           <div className="flex items-baseline gap-2">
             <span className="font-serif text-4xl text-accent">
               <AnimatedCounter target={yearsOfTradition} suffix="+" />

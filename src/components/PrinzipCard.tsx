@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Prinzip } from "@/data/prinzipien";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { richText } from "@/lib/richText";
 
 interface PrinzipCardProps {
   prinzip: Prinzip;
@@ -22,7 +23,7 @@ export function PrinzipCard({ prinzip, delay = 0 }: PrinzipCardProps) {
         </div>
         <div className="p-5">
           <h3 className="font-serif text-xl text-accent mb-2">{prinzip.name}</h3>
-          <p className="text-muted-fg text-sm leading-relaxed">{prinzip.description}</p>
+          <p className="text-muted-fg text-sm leading-relaxed">{richText(prinzip.description)}</p>
         </div>
       </div>
     </ScrollReveal>

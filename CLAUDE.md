@@ -102,3 +102,7 @@ Uses CSS-based configuration, NOT `tailwind.config.ts`. All theme tokens are in 
 ## Deployment
 
 GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to Hostinger via FTP on push to `main`. Required secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+
+
+more information on KStV Ravensberg
+https://vereins.fandom.com/wiki/KStV_Ravensberg

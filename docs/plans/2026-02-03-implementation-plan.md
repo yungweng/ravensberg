@@ -117,8 +117,8 @@ Hero/house:
 - `https://kstvravensberg.de/wp-content/uploads/2026/02/DSC_0417-scaled.jpg` → Event photo
 
 Vorstand portraits:
-- `https://kstvravensberg.de/wp-content/uploads/2026/02/20260202_193437-scaled.jpg` → Tom Buchwalt
-- `https://kstvravensberg.de/wp-content/uploads/2026/02/Screenshot-2026-02-02-152837.png` → Henri Kanani Cassimir
+- `https://kstvravensberg.de/wp-content/uploads/2026/02/20260202_193437-scaled.jpg` → Tom Buchwald
+- `https://kstvravensberg.de/wp-content/uploads/2026/02/Screenshot-2026-02-02-152837.png` → Henri Paul Kasten
 - `https://kstvravensberg.de/wp-content/uploads/2026/02/Screenshot-2026-02-02-152951.png` → Fuxmajor
 
 Rooms:
@@ -162,16 +162,16 @@ export interface VorstandMember {
 
 export const vorstand: VorstandMember[] = [
   {
-    name: "Tom Buchwalt",
+    name: "Tom Buchwald",
     role: "Senior (x)",
-    image: "/images/vorstand/tom-buchwalt.jpg",
+    image: "/images/vorstand/tom-buchwald.jpg",
     description:
       "In meinem nunmehr schon fünften Aktivensemester ist mir die Ehre zu Teil geworden den KStV Ravensberg als Senior anzuführen. Dabei bin ich nicht nur intern als höchstes Entscheidungsgremium, sondern auch extern als Außendarstellung und Repräsentation zuständig.",
   },
   {
-    name: "Henri Kanani Cassimir",
+    name: "Henri Paul Kasten",
     role: "Consenior (xx)",
-    image: "/images/vorstand/henri-kanani-cassimir.png",
+    image: "/images/vorstand/henri-paul-kasten.png",
     description:
       "Der Consenior, der den Senior vertritt und ihm in allen Belangen zur Seite steht. Ich bin hauptsächlich für die Planung und Umsetzung von Veranstaltungen zuständig.",
   },

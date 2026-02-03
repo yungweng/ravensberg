@@ -19,7 +19,7 @@ export function AnimatedCounter({
   className = "",
 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   const prefersReducedMotion = useReducedMotion();
   const [count, setCount] = useState(0);
 

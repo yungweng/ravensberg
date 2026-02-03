@@ -22,10 +22,10 @@ export default function DatenschutzPage() {
             <br />
             E-Mail:{" "}
             <a
-              href="mailto:info@kstvravensberg.de"
+              href="mailto:vorstand@kstv-ravensberg.de"
               className="text-accent hover:underline"
             >
-              info@kstvravensberg.de
+              vorstand@kstv-ravensberg.de
             </a>
           </p>
         </section>

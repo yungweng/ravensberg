@@ -82,13 +82,24 @@ Fonts loaded via `next/font/google` in `layout.tsx` as CSS variables. Tailwind m
 
 Uses CSS-based configuration, NOT `tailwind.config.ts`. All theme tokens are in `src/app/globals.css` inside the `@theme` block.
 
+## Images
+
+All images are **WebP** (converted 2026-02-03, commit `32165c4`). The only exception is `public/og-image.png` which stays PNG for social media crawler compatibility.
+
+- Bildband images were resized from ~9921×7016 to ~2000px wide
+- All 33 JPG/PNG images converted to WebP (61 MB → 8.3 MB, 87% reduction)
+- Duplicate `public/images/hero/haus-exterior.jpg` removed; Hero references `haus/haus-exterior.webp`
+- New Vorstand portraits should be added as `.webp` (convert before committing)
+
+Favicon files (`favicon.ico`, `icon.png`, `apple-icon.png`) live in `src/app/` as Next.js file-based metadata — not in `public/`.
+
 ## Key Patterns
 
 ### Static export constraints
 
 - `output: "export"` in `next.config.ts` — no server-side features (no API routes, no middleware, no SSR)
 - `images.unoptimized: true` — all `<Image>` components must include `unoptimized` prop
-- All images are static in `public/images/`
+- All images are static in `public/images/` (WebP format)
 
 ### Component conventions
 

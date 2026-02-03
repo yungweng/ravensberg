@@ -48,101 +48,107 @@ interface InstagramFeedProps {
 
 export function InstagramFeed({ posts }: InstagramFeedProps) {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
-  const hasPosts = posts.length > 0;
 
   return (
     <Section id="instagram" bgClassName="bg-muted">
       <div className="text-center mb-12">
         <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-          {hasPosts ? "Aktuelles" : "Eindrücke"}
+          Eindrücke
         </AnimatedHeading>
         <p className="text-muted-fg">
-          {hasPosts
-            ? "Aktuelle Beiträge von Instagram"
-            : "Aus über 100 Jahren Vereinsleben"}
+          Aus über 100 Jahren Vereinsleben
         </p>
       </div>
 
-      {hasPosts ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {posts.map((post, i) => (
-            <ScrollReveal key={post.id} delay={i * 0.05} className="h-full">
-              <a
-                href={post.permalink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col h-full bg-background rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="relative aspect-[4/3]">
-                  <Image
-                    src={getImageUrl(post)}
-                    alt={post.caption ? truncateCaption(post.caption, 80) : "Instagram Beitrag"}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="flex flex-col flex-1 p-4">
-                  <p className="text-sm text-muted-fg mb-2">
-                    {formatGermanDate(post.timestamp)}
-                  </p>
-                  {post.caption && (
-                    <p className="text-foreground text-sm leading-relaxed mb-3 flex-1">
-                      {truncateCaption(post.caption)}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
+        {galleryImages.map((img, i) => (
+          <ScrollReveal key={img.src} delay={i * 0.05}>
+            <button
+              type="button"
+              onClick={() => setLightbox(img)}
+              className="relative aspect-square rounded-lg overflow-hidden shadow-md block w-full cursor-pointer group"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover transition-[filter] duration-300 group-hover:brightness-75"
+                unoptimized
+              />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg
+                  aria-hidden="true"
+                  className="w-8 h-8 text-white drop-shadow-lg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+              </div>
+            </button>
+          </ScrollReveal>
+        ))}
+      </div>
+
+      {posts.length > 0 && (
+        <>
+          <div className="text-center mb-12 mt-16">
+            <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+              Aktuelles
+            </AnimatedHeading>
+            <p className="text-muted-fg">
+              Aktuelle Beiträge von Instagram
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {posts.map((post, i) => (
+              <ScrollReveal key={post.id} delay={i * 0.05} className="h-full">
+                <a
+                  href={post.permalink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col h-full bg-background rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={getImageUrl(post)}
+                      alt={post.caption ? truncateCaption(post.caption, 80) : "Instagram Beitrag"}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex flex-col flex-1 p-4">
+                    <p className="text-sm text-muted-fg mb-2">
+                      {formatGermanDate(post.timestamp)}
                     </p>
-                  )}
-                  <span className="text-accent text-sm font-medium">
-                    &rarr; Auf Instagram ansehen
-                  </span>
-                </div>
-              </a>
-            </ScrollReveal>
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
-          {galleryImages.map((img, i) => (
-            <ScrollReveal key={img.src} delay={i * 0.05}>
-              <button
-                type="button"
-                onClick={() => setLightbox(img)}
-                className="relative aspect-square rounded-lg overflow-hidden shadow-md block w-full cursor-pointer group"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-[filter] duration-300 group-hover:brightness-75"
-                  unoptimized
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg
-                    aria-hidden="true"
-                    className="w-8 h-8 text-white drop-shadow-lg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    <line x1="11" y1="8" x2="11" y2="14" />
-                    <line x1="8" y1="11" x2="14" y2="11" />
-                  </svg>
-                </div>
-              </button>
-            </ScrollReveal>
-          ))}
-        </div>
+                    {post.caption && (
+                      <p className="text-foreground text-sm leading-relaxed mb-3 flex-1">
+                        {truncateCaption(post.caption)}
+                      </p>
+                    )}
+                    <span className="text-accent text-sm font-medium">
+                      &rarr; Auf Instagram ansehen
+                    </span>
+                  </div>
+                </a>
+              </ScrollReveal>
+            ))}
+          </div>
+        </>
       )}
 
       <div className="text-center">
         <p className="text-muted-fg mb-6">
-          {hasPosts
-            ? "Folge uns für mehr Einblicke"
-            : "Mehr Eindrücke und aktuelle Beiträge auf Instagram"}
+          Folge uns für mehr Einblicke
         </p>
         <a
           href={siteConfig.instagram}

@@ -45,5 +45,5 @@ export const navigation = [
   { label: "Vorstand", href: "#vorstand" },
   { label: "Unser Haus", href: "#unser-haus" },
   { label: "Über uns", href: "#ueber-uns" },
-  { label: "Aktuelles", href: "#instagram" },
+  { label: "Eindrücke", href: "#instagram" },
 ];

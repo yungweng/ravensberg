@@ -57,26 +57,47 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="font-script text-5xl md:text-7xl lg:text-8xl text-white">
+        <h1 className="font-script text-4xl md:text-7xl lg:text-8xl text-white">
           <span className="sr-only">{titleText}</span>
           <span aria-hidden="true">
-            {titleText.split("").map((char, i) => (
-              <motion.span
-                // biome-ignore lint/suspicious/noArrayIndexKey: static character list from constant string, never reordered
-                key={i}
-                className="inline-block"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: prefersReducedMotion ? 0 : 0.3 + i * 0.06,
-                  ease: "easeOut",
-                }}
-                style={char === " " ? { width: "0.3em" } : undefined}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
+            {titleText.split(" ").map((word, wordIndex) => {
+              const charOffset = titleText.split(" ").slice(0, wordIndex).reduce((acc, w) => acc + w.length + 1, 0);
+              return (
+                <span key={word} className="whitespace-nowrap">
+                  {wordIndex > 0 && (
+                    <motion.span
+                      className="inline-block"
+                      style={{ width: "0.3em" }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: prefersReducedMotion ? 0 : 0.3 + (charOffset - 1) * 0.06,
+                        ease: "easeOut",
+                      }}
+                    >
+                      {"\u00A0"}
+                    </motion.span>
+                  )}
+                  {word.split("").map((char, charIndex) => (
+                    <motion.span
+                      // biome-ignore lint/suspicious/noArrayIndexKey: static character list from constant string, never reordered
+                      key={charIndex}
+                      className="inline-block"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: prefersReducedMotion ? 0 : 0.3 + (charOffset + charIndex) * 0.06,
+                        ease: "easeOut",
+                      }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
+              );
+            })}
           </span>
         </h1>
         <motion.p

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Religio Scientia Amicitia",
     "Studentenverbindung NRW",
     "Verbindung Münster",
-    "K.St.V. Ravensberg",
+    "KStV Ravensberg",
   ],
   authors: [{ name: "KStV Ravensberg zu Münster" }],
   creator: "KStV Ravensberg",

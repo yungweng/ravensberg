@@ -14,7 +14,7 @@ export default function DatenschutzPage() {
             1. Verantwortlicher
           </h2>
           <p>
-            K.St.V. Ravensberg zu M&uuml;nster
+            KStV Ravensberg zu M&uuml;nster
             <br />
             [Stra&szlig;e und Hausnummer]
             <br />

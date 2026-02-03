@@ -13,7 +13,7 @@ export default function ImpressumPage() {
             Angaben gem&auml;&szlig; &sect; 5 TMG / &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            K.St.V. Ravensberg zu M&uuml;nster
+            KStV Ravensberg zu M&uuml;nster
             <br />
             [Stra&szlig;e und Hausnummer]
             <br />

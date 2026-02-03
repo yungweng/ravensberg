@@ -3,7 +3,7 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "KStV Ravensberg zu Münster",
-    alternateName: "K.St.V. Ravensberg",
+    alternateName: "KStV Ravensberg",
     url: "https://kstvravensberg.de",
     logo: "https://kstvravensberg.de/images/wappen/wappen.png",
     description:

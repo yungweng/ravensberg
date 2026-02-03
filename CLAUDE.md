@@ -101,7 +101,20 @@ Uses CSS-based configuration, NOT `tailwind.config.ts`. All theme tokens are in 
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to Hostinger via FTP on push to `main`. Required secrets: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to Hostinger via rsync over SSH on push to `main`. Required secrets: `SSH_PRIVATE_KEY`, `SSH_HOST`, `SSH_USERNAME`, `SSH_PORT`.
+
+Deploy target: `~/domains/kstvravensberg.de/public_html/` on the Hostinger server.
+
+### Post-deploy: Hostinger CDN cache
+
+After deploying new content, **Hostinger's CDN/LiteSpeed cache may serve stale content**. If the site looks broken after a deploy (missing styles, broken images), purge the cache:
+
+1. **hPanel** → Websites → Dashboard → **CDN** → Flush cache
+2. **hPanel** → Advanced → **Cache Manager** → Purge All
+
+### WordPress backup
+
+A full WordPress backup (files + database) from 2026-02-03 is stored locally at `~/Desktop/ravensberg-wordpress-backup/` with a restore guide. Backups also remain on the server at `~/wordpress-backup-20260203.tar.gz` and `~/wordpress-db-backup-20260203.sql`.
 
 
 more information on KStV Ravensberg

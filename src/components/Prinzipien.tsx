@@ -18,9 +18,11 @@ export function Prinzipien() {
       </ScrollReveal>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {prinzipien.map((prinzip, index) => (
-          <TiltCard key={prinzip.name}>
-            <PrinzipCard prinzip={prinzip} delay={index * 0.1} />
-          </TiltCard>
+          <ScrollReveal key={prinzip.name} delay={index * 0.1} className="h-full">
+            <TiltCard className="h-full">
+              <PrinzipCard prinzip={prinzip} />
+            </TiltCard>
+          </ScrollReveal>
         ))}
       </div>
     </Section>

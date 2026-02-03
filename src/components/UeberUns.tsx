@@ -1,7 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 import { ueberUns } from "@/data/content";
 import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -11,11 +17,24 @@ import { richText } from "@/lib/richText";
 
 export function UeberUns() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const parallaxY = useTransform(scrollYProgress, [0, 1], [-60, 60]);
 
   return (
     <Section id="ueber-uns" className="relative overflow-hidden">
+      <div ref={sectionRef}>
       {/* Zirkel watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.04] pointer-events-none select-none">
+      <motion.div
+        style={{ y: prefersReducedMotion ? 0 : parallaxY }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] opacity-[0.04] pointer-events-none select-none"
+      >
         <Image
           src={ueberUns.zirkelImage}
           alt=""
@@ -24,7 +43,7 @@ export function UeberUns() {
           unoptimized
           aria-hidden="true"
         />
-      </div>
+      </motion.div>
 
       {/* Heading */}
       <ScrollReveal>
@@ -140,6 +159,7 @@ export function UeberUns() {
         isOpen={lightbox !== null}
         onClose={() => setLightbox(null)}
       />
+      </div>
     </Section>
   );
 }

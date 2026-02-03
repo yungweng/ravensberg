@@ -14,6 +14,7 @@ export function VorstandCard({ member }: VorstandCardProps) {
           alt={member.name}
           fill
           className="object-cover"
+          style={{ objectPosition: member.imagePosition ?? "center center" }}
           unoptimized
         />
       </div>

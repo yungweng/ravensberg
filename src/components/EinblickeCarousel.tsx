@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useReducedMotion } from "framer-motion";
 import {
   einblickeRow1,
@@ -15,10 +15,12 @@ function MarqueeRow({
   images,
   reverse,
   onImageClick,
+  onImageLoad,
 }: {
   images: EinblickeImage[];
   reverse?: boolean;
   onImageClick: (img: EinblickeImage) => void;
+  onImageLoad: () => void;
 }) {
   const prefersReducedMotion = useReducedMotion();
   const animationName = reverse ? "marquee-scroll-reverse" : "marquee-scroll";
@@ -38,13 +40,14 @@ function MarqueeRow({
             type="button"
             key={`${img.src}-${i}`}
             onClick={() => onImageClick(img)}
-            className="relative flex-shrink-0 h-[220px] md:h-[280px] aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group/img"
+            className="relative flex-shrink-0 h-[220px] md:h-[280px] aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group/img bg-muted"
           >
             <Image
               src={img.src}
               alt={img.alt}
               fill
               loading="eager"
+              onLoad={i < images.length ? onImageLoad : undefined}
               className="object-cover transition-[filter] duration-300 group-hover/img:brightness-75"
               unoptimized
             />
@@ -81,20 +84,37 @@ function shuffle<T>(array: T[]): T[] {
   return shuffled;
 }
 
+const TOTAL_UNIQUE = einblickeRow1.length + einblickeRow2.length + einblickeRow3.length;
+
 export function EinblickeCarousel() {
   const [lightbox, setLightbox] = useState<EinblickeImage | null>(null);
   const [rows, setRows] = useState([einblickeRow1, einblickeRow2, einblickeRow3]);
+  const [ready, setReady] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
 
   useEffect(() => {
     setRows([shuffle(einblickeRow1), shuffle(einblickeRow2), shuffle(einblickeRow3)]);
   }, []);
 
+  useEffect(() => {
+    if (loadedCount >= TOTAL_UNIQUE) {
+      setReady(true);
+    }
+  }, [loadedCount]);
+
+  const handleImageLoad = useCallback(() => {
+    setLoadedCount((c) => c + 1);
+  }, []);
+
   return (
     <>
-      <div className="w-screen relative left-1/2 -translate-x-1/2 flex flex-col gap-3">
-        <MarqueeRow images={rows[0]} onImageClick={setLightbox} />
-        <MarqueeRow images={rows[1]} reverse onImageClick={setLightbox} />
-        <MarqueeRow images={rows[2]} onImageClick={setLightbox} />
+      <div
+        className="w-screen relative left-1/2 -translate-x-1/2 flex flex-col gap-3 transition-opacity duration-700"
+        style={{ opacity: ready ? 1 : 0 }}
+      >
+        <MarqueeRow images={rows[0]} onImageClick={setLightbox} onImageLoad={handleImageLoad} />
+        <MarqueeRow images={rows[1]} reverse onImageClick={setLightbox} onImageLoad={handleImageLoad} />
+        <MarqueeRow images={rows[2]} onImageClick={setLightbox} onImageLoad={handleImageLoad} />
       </div>
 
       <Lightbox

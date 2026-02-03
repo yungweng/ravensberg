@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useReducedMotion } from "framer-motion";
 import {
   einblickeRow1,
@@ -71,15 +71,29 @@ function MarqueeRow({
   );
 }
 
+function shuffle<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export function EinblickeCarousel() {
   const [lightbox, setLightbox] = useState<EinblickeImage | null>(null);
+  const [rows, setRows] = useState([einblickeRow1, einblickeRow2, einblickeRow3]);
+
+  useEffect(() => {
+    setRows([shuffle(einblickeRow1), shuffle(einblickeRow2), shuffle(einblickeRow3)]);
+  }, []);
 
   return (
     <>
       <div className="w-screen relative left-1/2 -translate-x-1/2 flex flex-col gap-3">
-        <MarqueeRow images={einblickeRow1} onImageClick={setLightbox} />
-        <MarqueeRow images={einblickeRow2} reverse onImageClick={setLightbox} />
-        <MarqueeRow images={einblickeRow3} onImageClick={setLightbox} />
+        <MarqueeRow images={rows[0]} onImageClick={setLightbox} />
+        <MarqueeRow images={rows[1]} reverse onImageClick={setLightbox} />
+        <MarqueeRow images={rows[2]} onImageClick={setLightbox} />
       </div>
 
       <Lightbox

@@ -9,6 +9,22 @@ const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "-
 export const metadata: Metadata = {
   title: "KStV Ravensberg zu Münster",
   description: "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
+  openGraph: {
+    title: "KStV Ravensberg zu Münster",
+    description: "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
+    url: "https://kstvravensberg.de",
+    siteName: "KStV Ravensberg",
+    images: [
+      {
+        url: "https://kstvravensberg.de/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Wappen des KStV Ravensberg zu Münster",
+      },
+    ],
+    locale: "de_DE",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

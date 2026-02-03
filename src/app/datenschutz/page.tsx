@@ -2,33 +2,34 @@ import Link from "next/link";
 
 export default function DatenschutzPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-24">
-      <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-12">
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-8 sm:mb-12">
         Datenschutzerkl&auml;rung
       </h1>
 
-      <div className="prose-custom space-y-8 text-foreground/80 leading-relaxed">
+      <div className="prose-custom space-y-6 sm:space-y-8 text-foreground/80 leading-relaxed break-words">
         {/* 1. Verantwortlicher */}
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">
             1. Verantwortlicher
           </h2>
           <p>
-            KStV Ravensberg zu M&uuml;nster
+            Verein Alter Ravensberger
             <br />
-            [Stra&szlig;e und Hausnummer]
+            Raesfeldstra&szlig;e 32
             <br />
-            [PLZ] M&uuml;nster
+            48149 M&uuml;nster, Deutschland
             <br />
             E-Mail:{" "}
             <a
-              href="mailto:vorstand@kstv-ravensberg.de"
+              href="mailto:vorstand@kstvravensberg.de"
               className="text-accent hover:underline"
             >
-              vorstand@kstv-ravensberg.de
+              vorstand@kstvravensberg.de
             </a>
           </p>
         </section>
+
 
         {/* 2. Hosting */}
         <section>
@@ -123,7 +124,7 @@ export default function DatenschutzPage() {
               href="https://privacycenter.instagram.com/policy"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent hover:underline"
+              className="text-accent hover:underline break-all"
             >
               https://privacycenter.instagram.com/policy
             </a>

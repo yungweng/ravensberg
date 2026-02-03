@@ -2,22 +2,22 @@ import Link from "next/link";
 
 export default function ImpressumPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-24">
-      <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-12">
+    <main className="max-w-3xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-foreground mb-8 sm:mb-12">
         Impressum
       </h1>
 
-      <div className="prose-custom space-y-8 text-foreground/80 leading-relaxed">
+      <div className="prose-custom space-y-6 sm:space-y-8 text-foreground/80 leading-relaxed break-words">
         <section>
           <h2 className="font-serif text-xl text-foreground mb-3">
             Angaben gem&auml;&szlig; &sect; 5 TMG / &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            KStV Ravensberg zu M&uuml;nster
+            Verein Alter Ravensberger
             <br />
-            [Stra&szlig;e und Hausnummer]
+            Raesfeldstra&szlig;e 32
             <br />
-            [PLZ] M&uuml;nster
+            48149 M&uuml;nster, Deutschland
           </p>
         </section>
 
@@ -26,9 +26,9 @@ export default function ImpressumPage() {
             Vertreten durch
           </h2>
           <p>
-            [Vorname Nachname, Vorsitzender]
+            Den jeweiligen Vorstand des Vereins Alter Ravensberger.
             <br />
-            [Vorname Nachname, stellvertretender Vorsitzender]
+            Kontakt: vorstand@kstvravensberg.de
           </p>
         </section>
 
@@ -37,10 +37,10 @@ export default function ImpressumPage() {
           <p>
             E-Mail:{" "}
             <a
-              href="mailto:vorstand@kstv-ravensberg.de"
+              href="mailto:vorstand@kstvravensberg.de"
               className="text-accent hover:underline"
             >
-              vorstand@kstv-ravensberg.de
+              vorstand@kstvravensberg.de
             </a>
           </p>
         </section>
@@ -50,11 +50,11 @@ export default function ImpressumPage() {
             Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            [Vorname Nachname]
+            Verein Alter Ravensberger
             <br />
-            [Stra&szlig;e und Hausnummer]
+            Raesfeldstra&szlig;e 32
             <br />
-            [PLZ] M&uuml;nster
+            48149 M&uuml;nster, Deutschland
           </p>
         </section>
 

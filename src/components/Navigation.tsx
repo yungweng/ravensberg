@@ -68,7 +68,12 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
     >
       <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         <a
-          href="#hero"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            history.replaceState(null, "", window.location.pathname);
+          }}
           className={`flex items-center gap-2 font-serif text-xl font-bold transition-colors duration-300 ${
             scrolled ? "text-foreground" : "text-white"
           }`}

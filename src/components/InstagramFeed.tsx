@@ -69,7 +69,7 @@ function InstagramCta() {
 export function InstagramFeed({ posts }: InstagramFeedProps) {
   return (
     <>
-      <Section id="eindruecke" bgClassName="bg-muted">
+      <Section id="eindruecke" bgClassName="bg-muted" className={posts.length > 0 ? "!pb-0" : ""}>
         <div className="text-center mb-12">
           <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
             Eindrücke
@@ -85,7 +85,7 @@ export function InstagramFeed({ posts }: InstagramFeedProps) {
       </Section>
 
       {posts.length > 0 && (
-        <Section id="aktuelles" bgClassName="bg-muted">
+        <Section id="aktuelles" bgClassName="bg-muted" className="!pt-16">
           <div className="text-center mb-12">
             <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
               Aktuelles

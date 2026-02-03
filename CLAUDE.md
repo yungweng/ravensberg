@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-bearing student fraternity at the University of Münster, founded 1919. German-language single-page site with two legal sub-routes.
 
+## Dev Environment
+
+Uses [Devbox](https://www.jetify.com/devbox) + [direnv](https://direnv.net/) for reproducible tooling. On `cd` into the repo (with direnv hooked into your shell), the environment auto-activates.
+
+- `devbox install` — install pinned toolchain (node, bun, biome)
+- Versions are locked in `devbox.lock` (committed)
+
 ## Commands
 
 - `bun run dev` — local dev server (http://localhost:3000)

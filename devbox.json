@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "nodejs@25",
+    "bun@latest",
+    "biome@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'devbox ready — node, bun, biome'"
+    ],
+    "scripts": {
+      "dev": ["bun run dev"],
+      "build": ["bun run build"],
+      "lint": ["bun run lint"],
+      "lint:fix": ["bun run lint:fix"]
+    }
+  }
+}

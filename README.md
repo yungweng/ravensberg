@@ -12,9 +12,12 @@ Website for KStV Ravensberg — a Catholic, non-dueling, color-bearing student f
 
 ## Getting Started
 
+This project uses [Devbox](https://www.jetify.com/devbox) for reproducible tooling. With [direnv](https://direnv.net/) hooked into your shell, the environment activates automatically on `cd`.
+
 ```bash
-bun install
-bun run dev
+devbox install    # install pinned node, bun, biome
+bun install       # install dependencies
+bun run dev       # start dev server
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.

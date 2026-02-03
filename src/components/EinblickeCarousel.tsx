@@ -44,6 +44,7 @@ function MarqueeRow({
               src={img.src}
               alt={img.alt}
               fill
+              loading="eager"
               className="object-cover transition-[filter] duration-300 group-hover/img:brightness-75"
               unoptimized
             />

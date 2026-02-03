@@ -85,7 +85,7 @@ export function InstagramFeed({ posts }: InstagramFeedProps) {
       </Section>
 
       {posts.length > 0 && (
-        <Section id="aktuelles" bgClassName="bg-muted" className="!pt-16">
+        <Section id="aktuelles" bgClassName="bg-muted" className="!pt-16 scroll-mt-20">
           <div className="text-center mb-12">
             <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
               Aktuelles

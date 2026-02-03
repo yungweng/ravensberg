@@ -1,5 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
+import {
+  generateOrganizationSchema,
+  generateLocalBusinessSchema,
+} from "@/lib/seo/structured-data";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -7,11 +11,43 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "--font-great-vibes" });
 
 export const metadata: Metadata = {
-  title: "KStV Ravensberg zu Münster",
-  description: "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
+  title: {
+    default: "KStV Ravensberg zu Münster",
+    template: "%s | KStV Ravensberg",
+  },
+  description:
+    "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919. Religio, Scientia, Amicitia.",
+  keywords: [
+    "KStV Ravensberg",
+    "Studentenverbindung Münster",
+    "Kartellverband",
+    "KV Verbindung",
+    "katholische Studentenverbindung",
+    "nichtschlagend",
+    "farbenführend",
+    "Universität Münster",
+    "Kreuzviertel Münster",
+    "Religio Scientia Amicitia",
+    "Studentenverbindung NRW",
+    "Verbindung Münster",
+    "K.St.V. Ravensberg",
+  ],
+  authors: [{ name: "KStV Ravensberg zu Münster" }],
+  creator: "KStV Ravensberg",
+  publisher: "KStV Ravensberg zu Münster",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://kstvravensberg.de"),
+  alternates: {
+    canonical: "https://kstvravensberg.de/",
+  },
   openGraph: {
     title: "KStV Ravensberg zu Münster",
-    description: "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
+    description:
+      "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919.",
     url: "https://kstvravensberg.de",
     siteName: "KStV Ravensberg",
     images: [
@@ -25,6 +61,37 @@ export const metadata: Metadata = {
     locale: "de_DE",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "KStV Ravensberg zu Münster",
+    description:
+      "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
+    images: ["https://kstvravensberg.de/images/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "education",
+  classification: "Organization",
+  referrer: "origin-when-cross-origin",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#8B7324" },
+    { media: "(prefers-color-scheme: dark)", color: "#8B7324" },
+  ],
 };
 
 export default function RootLayout({
@@ -33,7 +100,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} scroll-smooth`}>
+    <html lang="de" dir="ltr" className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateLocalBusinessSchema()),
+          }}
+        />
+      </head>
       <body className="font-sans bg-background text-foreground antialiased">
         {children}
       </body>

@@ -37,7 +37,7 @@ Single scrollable page (`src/app/page.tsx`) with sections in this order:
 5. **Vorstand** — board member grid (the only content that changes, ~2x/year)
 6. **Unser Haus** — house exterior + room photo gallery
 7. **Über uns** — history with Zirkel watermark
-8. **Instagram** — placeholder grid (Meta Graph API integration pending)
+8. **Eindrücke & Aktuelles** — static photo gallery + live Instagram feed (blog-style cards)
 9. **Footer** — contact, tricolor stripe, legal links
 
 Legal pages: `/impressum` and `/datenschutz` (separate routes, not part of the scroll page).
@@ -54,7 +54,36 @@ To update Vorstand: replace portrait images in `public/images/vorstand/`, update
 
 ### Instagram integration
 
-`src/lib/instagram.ts` is a stub. When the Meta Developer App is configured, set `INSTAGRAM_TOKEN` as a GitHub Actions secret. The `InstagramFeed` component currently renders placeholders.
+Live Instagram posts are fetched at build time via the Meta Graph API (Instagram Business account). The `InstagramFeed` component shows two sub-sections:
+
+- **Eindrücke** — static photo gallery with lightbox (always visible)
+- **Aktuelles** — blog-style cards with image, date, caption, and permalink (only when posts are available)
+
+When no token is set or the API fails, only the Eindrücke gallery is shown.
+
+**Meta Developer setup:**
+- App: "Ravensberg Website" in [Meta Developer Dashboard](https://developers.facebook.com/apps/)
+- Product: Instagram Graph API (Business account)
+- Facebook Page connected to the Instagram Business account via Meta Business Suite
+- Token type: long-lived user token (60-day expiry, auto-refreshed)
+
+**GitHub Actions secrets (never commit these):**
+- `INSTAGRAM_TOKEN` — long-lived Instagram Graph API token
+- `GH_PAT` — fine-grained Personal Access Token (scoped to this repo, Secrets read/write permission), used by the token refresh workflow
+
+**Workflows:**
+- `deploy.yml` — builds with `INSTAGRAM_TOKEN` and deploys via rsync. Triggers: push to main, daily cron (5am UTC / 6am CET), manual dispatch
+- `refresh-instagram-token.yml` — calls Meta's refresh endpoint weekly (Monday 4am UTC / 5am CET) to renew the 60-day token and update the `INSTAGRAM_TOKEN` secret via `gh secret set`. Manual dispatch available for testing
+
+**Local dev with Instagram:** prefix the dev command with the token:
+```
+INSTAGRAM_TOKEN='<token>' bun run dev
+```
+
+**Key files:**
+- `src/lib/instagram.ts` — API client, fetches latest 6 posts (IMAGE + CAROUSEL_ALBUM + VIDEO)
+- `src/components/InstagramFeed.tsx` — renders both gallery and blog cards
+- `next.config.ts` — `remotePatterns` includes `**.cdninstagram.com` for Instagram images
 
 ## Design System
 
@@ -120,7 +149,9 @@ Favicon files (`favicon.ico`, `icon.png`, `apple-icon.png`) live in `src/app/` a
 
 ## Deployment
 
-GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to Hostinger via rsync over SSH on push to `main`. Required secrets: `SSH_PRIVATE_KEY`, `SSH_HOST`, `SSH_USERNAME`, `SSH_PORT`.
+GitHub Actions (`.github/workflows/deploy.yml`) builds and deploys to Hostinger via rsync over SSH on push to `main`, daily at 5am UTC, or via manual dispatch. Required secrets: `SSH_PRIVATE_KEY`, `SSH_HOST`, `SSH_USERNAME`, `SSH_PORT`, `INSTAGRAM_TOKEN`.
+
+Additional workflow: `.github/workflows/refresh-instagram-token.yml` auto-refreshes the Instagram token weekly. Requires: `INSTAGRAM_TOKEN`, `GH_PAT`.
 
 Deploy target: `~/domains/kstvravensberg.de/public_html/` on the Hostinger server.
 

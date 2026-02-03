@@ -11,20 +11,20 @@ export const vorstand: VorstandMember[] = [
     role: "Senior (x)",
     image: "/images/vorstand/tom-buchwald.jpg",
     description:
-      "In meinem nunmehr schon fünften Aktivensemester ist mir die Ehre zu Teil geworden den KStV Ravensberg als Senior anzuführen. Dabei bin ich nicht nur intern als höchstes Entscheidungsgremium, sondern auch extern als Außendarstellung und Repräsentation zuständig.",
+      "In meinem fünften Aktivensemester führe ich den KStV Ravensberg als Senior. Intern leite ich die Convente und treffe die zentralen Entscheidungen, extern vertrete ich unseren Verein nach außen — gegenüber dem KV, anderen Verbindungen und der Universität.",
   },
   {
     name: "Henri Paul Kasten",
     role: "Consenior (xx)",
     image: "/images/vorstand/henri-paul-kasten.png",
     description:
-      "Der Consenior, der den Senior vertritt und ihm in allen Belangen zur Seite steht. Ich bin hauptsächlich für die Planung und Umsetzung von Veranstaltungen zuständig.",
+      "Als Consenior vertrete ich den Senior und bin seine rechte Hand. Mein Schwerpunkt liegt auf der Planung und Umsetzung unserer Veranstaltungen — von Kneipen und Kommersen bis zu Vortragsabenden und geselligen Runden auf dem Haus.",
   },
   {
     name: "Elias Sanders",
     role: "Fuxmajor (FM)",
     image: "/images/vorstand/elias-sanders.png",
     description:
-      "In diesem Wintersemester bin ich als Fuxmajor für die Neuen Leute aus unseren Reihen zuständig. Meine persönliche Überzeugung, das Erfahrungen in die Gemeinschaft auf die ersten natürlich Hausforderungen und die Orientierung geben.",
+      "Als Fuxmajor begleite ich die neuen Mitglieder in ihren ersten Semestern. Ich bringe ihnen unsere Traditionen und Geschichte nahe und sorge dafür, dass sie sich in der Gemeinschaft zurechtfinden — denn gerade der Anfang entscheidet, ob aus Interesse echte Zugehörigkeit wird.",
   },
 ];

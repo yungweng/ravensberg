@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${inter.variable} ${playfair.variable} ${greatVibes.variable}`}>
+    <html lang="de" className={`${inter.variable} ${playfair.variable} ${greatVibes.variable} scroll-smooth`}>
       <body className="font-sans bg-background text-foreground antialiased">
         {children}
       </body>

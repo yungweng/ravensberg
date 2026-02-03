@@ -7,7 +7,7 @@ interface VorstandCardProps {
 
 export function VorstandCard({ member }: VorstandCardProps) {
   return (
-    <div className="rounded-lg overflow-hidden bg-muted">
+    <div className="rounded-lg overflow-hidden bg-muted h-full">
       <div className="relative aspect-[3/4] overflow-hidden">
         <Image
           src={member.image}

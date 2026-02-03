@@ -17,8 +17,8 @@ export function Vorstand() {
       </ScrollReveal>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {vorstand.map((member, index) => (
-          <ScrollReveal key={member.name} delay={index * 0.1}>
-            <TiltCard>
+          <ScrollReveal key={member.name} delay={index * 0.1} className="h-full">
+            <TiltCard className="h-full">
               <VorstandCard member={member} />
             </TiltCard>
           </ScrollReveal>

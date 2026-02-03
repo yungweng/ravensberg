@@ -9,18 +9,18 @@ export const prinzipien: Prinzip[] = [
     name: "Religio",
     image: "/images/prinzipien/kirche-muenster.jpg",
     description:
-      "Wir leben und bewahren unseren katholischen Glauben, ohne streng gläubig zu sein. Religio bedeutet für uns, den Glauben im Alltag zu tragen und nach christlichen Werten zu handeln. Unser Glaube verbindet, schafft Orientierung und bietet Halt in Studium, Beruf und Leben.",
+      "Der KStV Ravensberg wurde als katholischer Verein gegründet, öffnete sich aber 1975 für Christen aller Konfessionen. Religio heißt für uns nicht Frömmigkeit um ihrer selbst willen, sondern ein Kompass: Wir handeln nach christlichen Werten, suchen den Dialog und stehen füreinander ein — im Studium, im Beruf, im Leben.",
   },
   {
     name: "Scientia",
     image: "/images/prinzipien/scientia.jpg",
     description:
-      "Bildung ist mehr als das Studium eines Fachs. Wir fördern den Austausch über Fachgrenzen hinweg, diskutieren aktiv weltoffene und gegenwärtige Themen in Diskussionsrunden. Streben nach Wissen und Wahrheit sind für Verantwortung gegenüber der Gesellschaft.",
+      "Ein Fachstudium allein macht noch keinen gebildeten Menschen. Wir diskutieren über Fachgrenzen hinweg, laden Redner ein, streiten über Politik, Gesellschaft und Wissenschaft. Wer Wissen ernst nimmt, trägt Verantwortung — gegenüber sich selbst und gegenüber anderen.",
   },
   {
     name: "Amicitia",
     image: "/images/prinzipien/amicitia.jpg",
     description:
-      "Amicitia ist das Herz unseres Bundes. Sie steht für lebenslange Freundschaft, für gegenseitige Unterstützung und Vertrauen. Was im Studium als Gemeinschaft beginnt, wächst ein lebenslang Netzwerk fürs Leben.",
+      "Amicitia — Freundschaft — ist der Kern des Lebensbundprinzips. Was als Gemeinschaft unter Studenten beginnt, hält ein Leben lang. Alte Herren und Aktive stehen einander bei, beruflich wie persönlich. Das ist keine Formel: 1936 gründeten Ravensberger am Tag der Auflösung einen Geheimbund, um ihre Freundschaft durch die NS-Zeit zu retten.",
   },
 ];

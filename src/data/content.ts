@@ -2,20 +2,20 @@ export const siteConfig = {
   name: "KStV Ravensberg",
   fullName: "KStV Ravensberg zu Münster",
   description: "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
-  email: "info@kstvravensberg.de",
+  email: "vorstand@kstv-ravensberg.de",
   instagram: "https://www.instagram.com/kstvravensberg",
   instagramHandle: "@kstvravensberg",
 };
 
 export const willkommen = {
   heading: "Willkommen beim K.St.V. Ravensberg!",
-  text: "Wir sind eine Katholische, nichtschlagende und farbenführende Studentenverbindung an der Universität Münster. Seit unserer Gründung im Jahr 1919 stehen wir für Gemeinschaft, Verantwortung und lebenslange Freundschaft. Bei uns treffen Tradition und modernes Studentenleben aufeinander: Wir sind der Meinung, dass Studium mehr ist als nur Lernen — es ist eine Zeit, in der Freundschaften fürs Leben entstehen und Werte wachsen, wenn man gemeinsam etwas gestaltet. Unser Verein bietet Studierenden eine Gemeinschaft, die über das Studium hinaus trägt. Im Mittelpunkt stehen unsere drei Prinzipien, die unser Handeln und Miteinander prägen: Religio, Scientia und Amicitia.",
+  text: "Am 5. Mai 1919 gründeten 35 Studenten in Münster den KStV Ravensberg — mitten im Umbruch der Nachkriegszeit, als die Hörsäle sich wieder füllten und junge Männer nach Halt suchten. Seitdem sind über hundert Jahre vergangen, und aus dem Gründungsabend ist ein Bund geworden, der Generationen verbindet. Wir sind eine nichtschlagende, farbenführende Verbindung im Kartellverband (KV), und unser Name geht auf die mittelalterliche Grafschaft Ravensberg in Ostwestfalen zurück — deren Wappen wir bis heute tragen. Drei Prinzipien bestimmen unser Miteinander: Religio, Scientia und Amicitia. Unser Wahlspruch \u201EVorwärts! Aufwärts!\u201C ist keine leere Formel. Er fordert uns auf, nicht stehenzubleiben.",
   image: "/images/veranstaltungen/winterfest-stehen.jpg",
 };
 
 export const unserHaus = {
   heading: "Unser Haus",
-  text: "Unser ursprüngliches Offiziershaus wurde 1960 erworben und 1962 eingeweiht. Seitdem ist es zum Mittelpunkt unseres Vereinslebens geworden. Das Ravensberg-Haus in der Raesfeldstraße bildet bis heute das Zentrum unserer Gemeinschaft. Hier finden unsere Veranstaltungen, Kneipen, Kommerse und Convente statt, genauso wie gemütliche Abende, Gespräche und das tägliche Miteinander der Hausbewohner.",
+  text: "Schon in den 1920er-Jahren wünschten sich die Ravensberger ein eigenes Dach — damals reichte es nur für ein Bootshaus an der Werse, das 1922 für 12.500 Mark gebaut und vom Hochwasser regelmäßig heimgesucht wurde. Der Traum vom richtigen Vereinshaus brauchte Jahrzehnte. Am 31. Mai 1960 unterschrieb der Verein den Kaufvertrag für das Haus in der Raesfeldstraße 32, mitten im Münsteraner Kreuzviertel. Zwei Jahre später zogen die ersten Ravensberger ein. Seitdem ist das Ravensberg-Haus Dreh- und Angelpunkt unseres Vereinslebens: Kneipen, Kommerse, Convente, aber auch das alltägliche Miteinander der Hausbewohner finden hier statt.",
   image: "/images/haus/haus-exterior.jpg",
   raeume: {
     heading: "Unsere Räume",
@@ -31,8 +31,8 @@ export const unserHaus = {
 export const ueberUns = {
   heading: "Über uns",
   subtitle: "K.St.V. Ravensberg zu Münster",
-  text: "Wir, der Katholische Studentenverein Ravensberg zu Münster, sind eine Gemeinschaft von Studierenden und ehemaligen Studierenden, die seit über hundert Jahren durch gemeinsame Werte, Traditionen und echte Freundschaft verbunden sind. Als Teil des Kartellverbands katholischer deutscher Studentenvereine (KV) stehen wir für die Prinzipien Religio, Scientia und Amicitia — also für Glaube, Wissenschaft und Freundschaft. Unser Wahlspruch lautet \u201EVorwärts! Aufwärts!\u201C.",
-  history: "Unser Verein wurde am 22. Juni 1919, kurz nach dem Ende des Ersten Weltkriegs, als Katholischer Studentenverein in Münster gegründet. Die Gründung fiel in eine Zeit des gesellschaftlichen Umbruchs: Die junge Weimarer Republik suchte nach Orientierung, und katholische Studierende wollten eine Gemeinschaft schaffen, die ihnen Halt, Bildung und Zusammenhalt bot. Von Beginn an war der KStV Ravensberg dem Kartellverband (KV) angeschlossen und teilte dessen Ideale einer nichtschlagenden, farbenführenden Verbindung.",
+  text: "Der KStV Ravensberg entstand 1919 aus einer Teilung des KStV Germania Münster, als nach dem Ersten Weltkrieg so viele Heimkehrer in die Verbindung drängten, dass sie schlicht zu groß wurde — wie schon 1901, als aus Germania auch Cimbria und Markomannia hervorgingen. Am 5. Mai trafen sich 35 Germanen zum Gründungsconvent. In einer Kampfabstimmung setzte sich \u201ERavensberg\u201C einstimmig gegen \u201EHellweg\u201C durch. Der Name verweist auf die Grafschaft Ravensberg im nördlichen Ostwestfalen, deren Wappen der Verein übernahm. Noch im selben Semester wuchs die Zahl auf 84 Mitglieder. Als 59. Verein trat Ravensberg dem Kartellverband bei — dem Dachverband, den schon der Mutterverein Germania mitgegründet hatte.",
+  history: "Die Geschichte des Vereins ist keine glatte Linie. 1933 zwang das NS-Regime den Ravensbergern das Führerprinzip auf, dann den Namen \u201EKatholische Deutsche Burschenschaft Ravensberg\u201C, schließlich nur noch \u201EStudentenverein Ravensberg\u201C. Am 17. Mai 1936 löste sich der Verein auf — und gründete noch am selben Tag den \u201EBund Münsterischer Ravensberger\u201C, um die Bande zu bewahren. Nach dem Krieg ließ die britische Besatzung nur kirchliche Gruppen zu: So lebte der Verein 1947 als \u201EKStV Paulus\u201C wieder auf, bis er nach Gründung der Bundesrepublik seinen alten Namen zurückerhielt. Aus den Reihen des KStV Ravensberg kamen ein Vizepräsident des Bundesgerichtshofes, ein Reichstagsabgeordneter, ein Ordensprovenzial, ein Physiker und mehrere Träger hoher Auszeichnungen — Menschen, die den Wahlspruch \u201EVorwärts! Aufwärts!\u201C ernst nahmen.",
   zirkelImage: "/images/wappen/zirkel.png",
   historischImage: "/images/geschichte/bildband-1919-gruendung.jpg",
   redeImage: "/images/veranstaltungen/winterfest-rede.jpg",

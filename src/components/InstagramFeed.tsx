@@ -34,23 +34,59 @@ interface InstagramFeedProps {
   posts: InstagramPost[];
 }
 
+function InstagramCta() {
+  return (
+    <div className="text-center mt-12">
+      <p className="text-muted-fg mb-6">
+        Folge uns für mehr Einblicke
+      </p>
+      <a
+        href={siteConfig.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-lg font-medium hover:bg-foreground/90 transition-colors"
+      >
+        <svg
+          aria-hidden="true"
+          className="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="5" />
+          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+        </svg>
+        {siteConfig.instagramHandle} auf Instagram
+      </a>
+    </div>
+  );
+}
+
 export function InstagramFeed({ posts }: InstagramFeedProps) {
   return (
-    <Section id="instagram" bgClassName="bg-muted">
-      <div className="text-center mb-12">
-        <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
-          Eindrücke
-        </AnimatedHeading>
-        <p className="text-muted-fg">
-          Aus über 100 Jahren Vereinsleben
-        </p>
-      </div>
+    <>
+      <Section id="eindruecke" bgClassName="bg-muted">
+        <div className="text-center mb-12">
+          <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
+            Eindrücke
+          </AnimatedHeading>
+          <p className="text-muted-fg">
+            Aus über 100 Jahren Vereinsleben
+          </p>
+        </div>
 
-      <EinblickeCarousel />
+        <EinblickeCarousel />
+
+        {posts.length === 0 && <InstagramCta />}
+      </Section>
 
       {posts.length > 0 && (
-        <>
-          <div id="aktuelles" className="text-center mb-12 mt-16">
+        <Section id="aktuelles" bgClassName="bg-muted">
+          <div className="text-center mb-12">
             <AnimatedHeading className="font-serif text-3xl md:text-4xl text-foreground mb-4">
               Aktuelles
             </AnimatedHeading>
@@ -94,36 +130,10 @@ export function InstagramFeed({ posts }: InstagramFeedProps) {
               </ScrollReveal>
             ))}
           </div>
-        </>
-      )}
 
-      <div className="text-center mt-12">
-        <p className="text-muted-fg mb-6">
-          Folge uns für mehr Einblicke
-        </p>
-        <a
-          href={siteConfig.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-lg font-medium hover:bg-foreground/90 transition-colors"
-        >
-          <svg
-            aria-hidden="true"
-            className="w-5 h-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <rect x="2" y="2" width="20" height="20" rx="5" />
-            <circle cx="12" cy="12" r="5" />
-            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-          </svg>
-          {siteConfig.instagramHandle} auf Instagram
-        </a>
-      </div>
-    </Section>
+          <InstagramCta />
+        </Section>
+      )}
+    </>
   );
 }

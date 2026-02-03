@@ -16,7 +16,7 @@ export const willkommen = {
 export const unserHaus = {
   heading: "Unser Haus",
   text: "Unser ursprüngliches Offiziershaus wurde 1960 erworben und 1962 eingeweiht. Seitdem ist es zum Mittelpunkt unseres Vereinslebens geworden. Das Ravensberg-Haus in der Raesfeldstraße bildet bis heute das Zentrum unserer Gemeinschaft. Hier finden unsere Veranstaltungen, Kneipen, Kommerse und Convente statt, genauso wie gemütliche Abende, Gespräche und das tägliche Miteinander der Hausbewohner.",
-  image: "/images/haus/haus-exterior.png",
+  image: "/images/haus/haus-exterior.jpg",
   raeume: {
     heading: "Unsere Räume",
     images: [
@@ -33,9 +33,9 @@ export const ueberUns = {
   subtitle: "K.St.V. Ravensberg zu Münster",
   text: "Wir, der Katholische Studentenverein Ravensberg zu Münster, sind eine Gemeinschaft von Studierenden und ehemaligen Studierenden, die seit über hundert Jahren durch gemeinsame Werte, Traditionen und echte Freundschaft verbunden sind. Als Teil des Kartellverbands katholischer deutscher Studentenvereine (KV) stehen wir für die Prinzipien Religio, Scientia und Amicitia — also für Glaube, Wissenschaft und Freundschaft. Unser Wahlspruch lautet \u201EVorwärts! Aufwärts!\u201C.",
   history: "Unser Verein wurde am 22. Juni 1919, kurz nach dem Ende des Ersten Weltkriegs, als Katholischer Studentenverein in Münster gegründet. Die Gründung fiel in eine Zeit des gesellschaftlichen Umbruchs: Die junge Weimarer Republik suchte nach Orientierung, und katholische Studierende wollten eine Gemeinschaft schaffen, die ihnen Halt, Bildung und Zusammenhalt bot. Von Beginn an war der KStV Ravensberg dem Kartellverband (KV) angeschlossen und teilte dessen Ideale einer nichtschlagenden, farbenführenden Verbindung.",
-  zirkelImage: "/images/geschichte/zirkel.webp",
+  zirkelImage: "/images/wappen/zirkel.png",
   historischImage: "/images/geschichte/historisch.jpg",
-  redeImage: "/images/geschichte/rede.png",
+  redeImage: "/images/veranstaltungen/winterfest-rede.jpg",
   wahlspruch: "\u201EVorwärts! Aufwärts!\u201C",
 };
 

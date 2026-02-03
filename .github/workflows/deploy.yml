@@ -5,6 +5,7 @@ on:
     branches: [main]
   schedule:
     - cron: '0 5 * * *'  # daily at 5am UTC (6am CET)
+  workflow_dispatch:
 
 jobs:
   deploy:

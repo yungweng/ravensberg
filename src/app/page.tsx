@@ -8,8 +8,11 @@ import { UeberUns } from "@/components/UeberUns";
 import { InstagramFeed } from "@/components/InstagramFeed";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
+import { fetchInstagramPosts } from "@/lib/instagram";
 
-export default function Home() {
+export default async function Home() {
+  const posts = await fetchInstagramPosts();
+
   return (
     <>
       <Navigation />
@@ -23,7 +26,7 @@ export default function Home() {
       <UnserHaus />
       <UeberUns />
       <SectionDivider />
-      <InstagramFeed />
+      <InstagramFeed posts={posts} />
       <Footer />
     </>
   );

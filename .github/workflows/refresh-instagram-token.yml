@@ -1,0 +1,28 @@
+name: Refresh Instagram Token
+
+on:
+  schedule:
+    - cron: '0 4 * * 1'  # every Monday at 4am UTC (5am CET)
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh long-lived token
+        id: refresh
+        run: |
+          RESPONSE=$(curl -sf "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=${{ secrets.INSTAGRAM_TOKEN }}")
+          NEW_TOKEN=$(echo "$RESPONSE" | jq -r '.access_token')
+          if [ "$NEW_TOKEN" = "null" ] || [ -z "$NEW_TOKEN" ]; then
+            echo "::error::Failed to refresh token: $RESPONSE"
+            exit 1
+          fi
+          EXPIRES_IN=$(echo "$RESPONSE" | jq -r '.expires_in')
+          echo "Token refreshed, expires in $((EXPIRES_IN / 86400)) days"
+          echo "new_token=$NEW_TOKEN" >> "$GITHUB_OUTPUT"
+
+      - name: Update GitHub secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh secret set INSTAGRAM_TOKEN --body "${{ steps.refresh.outputs.new_token }}" --repo "${{ github.repository }}"

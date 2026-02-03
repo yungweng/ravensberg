@@ -15,7 +15,7 @@ export default async function Home() {
 
   return (
     <>
-      <Navigation />
+      <Navigation hasInstagramPosts={posts.length > 0} />
       <Hero />
       <Willkommen />
       <SectionDivider />

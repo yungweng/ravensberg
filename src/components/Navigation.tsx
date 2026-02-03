@@ -3,11 +3,24 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { navigation } from "@/data/content";
+import { useMemo } from "react";
 
-export function Navigation() {
+interface NavigationProps {
+  hasInstagramPosts?: boolean;
+}
+
+export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+
+  const navItems = useMemo(() => {
+    if (!hasInstagramPosts) return navigation;
+    return [
+      ...navigation,
+      { label: "Aktuelles", href: "#aktuelles" },
+    ];
+  }, [hasInstagramPosts]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +32,7 @@ export function Navigation() {
   }, []);
 
   useEffect(() => {
-    const sectionIds = navigation
+    const sectionIds = navItems
       .map((item) => item.href.replace("#", ""))
       .filter(Boolean);
 
@@ -40,7 +53,7 @@ export function Navigation() {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [navItems]);
 
   const handleLinkClick = useCallback(() => {
     setMobileOpen(false);
@@ -74,7 +87,7 @@ export function Navigation() {
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-6">
-          {navigation.map((item) => {
+          {navItems.map((item) => {
             const sectionId = item.href.replace("#", "");
             const isActive = activeSection === sectionId;
             return (
@@ -131,7 +144,7 @@ export function Navigation() {
         } ${scrolled ? "bg-background/95 backdrop-blur-sm" : "bg-foreground/90 backdrop-blur-sm"}`}
       >
         <ul className="px-6 py-4 flex flex-col gap-3">
-          {navigation.map((item) => {
+          {navItems.map((item) => {
             const sectionId = item.href.replace("#", "");
             const isActive = activeSection === sectionId;
             return (

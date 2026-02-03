@@ -8,11 +8,11 @@ Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-beari
 
 ## Commands
 
-- `npm run dev` — local dev server (http://localhost:3000)
-- `npm run build` — static export to `/out` directory
-- `npm run lint` — ESLint
+- `bun run dev` — local dev server (http://localhost:3000)
+- `bun run build` — static export to `/out` directory
+- `bun run lint` — ESLint
 
-No test framework is configured. Verify changes with `npm run build` (must produce `/out` with no errors).
+No test framework is configured. Verify changes with `bun run build` (must produce `/out` with no errors).
 
 ## Architecture
 

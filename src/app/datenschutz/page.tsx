@@ -20,6 +20,10 @@ export default function DatenschutzPage() {
             <br />
             48149 M&uuml;nster, Deutschland
             <br />
+            Vereinsregisternummer: VR 2870 (Amtsgericht M&uuml;nster)
+            <br />
+            Vertreten durch: Jonas Kemper (1. Vorsitzender)
+            <br />
             E-Mail:{" "}
             <a
               href="mailto:vorstand@kstv-ravensberg.de"

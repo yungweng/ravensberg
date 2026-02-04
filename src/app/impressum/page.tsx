@@ -19,6 +19,11 @@ export default function ImpressumPage() {
             <br />
             48149 M&uuml;nster, Deutschland
           </p>
+          <p className="mt-2">
+            Registergericht: Amtsgericht M&uuml;nster
+            <br />
+            Vereinsregisternummer: VR 2870
+          </p>
         </section>
 
         <section>
@@ -26,9 +31,15 @@ export default function ImpressumPage() {
             Vertreten durch
           </h2>
           <p>
-            Den jeweiligen Vorstand des Vereins Alter M&uuml;nsterischer Ravensberger e.V.
+            Jonas Kemper (1. Vorsitzender)
             <br />
-            Kontakt: vorstand@kstv-ravensberg.de
+            E-Mail:{" "}
+            <a
+              href="mailto:vorstand@kstv-ravensberg.de"
+              className="text-accent hover:underline"
+            >
+              vorstand@kstv-ravensberg.de
+            </a>
           </p>
         </section>
 
@@ -50,7 +61,7 @@ export default function ImpressumPage() {
             Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV
           </h2>
           <p>
-            Verein Alter M&uuml;nsterischer Ravensberger e.V.
+            Jonas Kemper
             <br />
             Raesfeldstra&szlig;e 32
             <br />

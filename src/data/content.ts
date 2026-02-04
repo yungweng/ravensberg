@@ -7,6 +7,8 @@ export const siteConfig = {
   instagramHandle: "@kstvravensberg",
   facebook: "https://www.facebook.com/KStVRavensberg",
   facebookHandle: "KStV Ravensberg Münster",
+  address: "Raesfeldstraße 32, 48149 Münster",
+  googleMaps: "https://maps.google.com/?q=Raesfeldstraße+32,+48149+Münster",
 };
 
 export const willkommen = {

@@ -46,12 +46,36 @@ export function Footer() {
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-3 text-background/80">
               Kontakt
             </h4>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-background/70 hover:text-background transition-colors text-sm"
-            >
-              {siteConfig.email}
-            </a>
+            <div className="flex flex-col gap-2">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-background/70 hover:text-background transition-colors text-sm"
+              >
+                {siteConfig.email}
+              </a>
+              <a
+                href={siteConfig.googleMaps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-background/70 hover:text-background transition-colors text-sm"
+              >
+                {/* Map pin icon */}
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                {siteConfig.address}
+              </a>
+            </div>
           </motion.div>
 
           {/* Column 3: Social */}

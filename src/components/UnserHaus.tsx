@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { unserHaus } from "@/data/content";
+import { unserHaus, siteConfig } from "@/data/content";
 import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { AnimatedHeading } from "@/components/AnimatedHeading";
@@ -101,6 +101,49 @@ export function UnserHaus() {
             </ScrollReveal>
           ))}
         </div>
+        {/* Google Maps embed */}
+        <ScrollReveal delay={0.2}>
+          <div className="mt-16">
+            <AnimatedHeading as="h3" className="font-serif text-2xl text-foreground text-center mb-8">
+              Hier findest du uns
+            </AnimatedHeading>
+            <div className="rounded-lg overflow-hidden shadow-lg aspect-[16/9] md:aspect-[21/9]">
+              <iframe
+                title="Standort KStV Ravensberg"
+                src="https://maps.google.com/maps?q=Studentenheim+Ravensberg+e.V.+Raesfeldstra%C3%9Fe+32+48149+M%C3%BCnster&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <p className="text-center mt-4">
+              <a
+                href={siteConfig.googleMaps}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors text-sm font-medium"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                In Google Maps öffnen
+              </a>
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
 
       <Lightbox

@@ -107,4 +107,17 @@ export const pageMetadata = {
       "Datenschutzerklärung des KStV Ravensberg zu Münster — Informationen zum Umgang mit personenbezogenen Daten.",
     noindex: true,
   },
+  geschichte: {
+    title: "Geschichte",
+    description:
+      "Geschichte des KStV Ravensberg zu Münster — Katholische Studentenverbindung im Kartellverband (KV), gegründet 1919 an der Universität Münster. Von der Gründung über die NS-Zeit bis heute.",
+    noindex: false,
+    keywords: [
+      "Geschichte KStV Ravensberg",
+      "Studentenverbindung Münster Geschichte",
+      "KV Verbindung Münster",
+      "Kartellverband Geschichte",
+      "katholische Studentenverbindung Geschichte",
+    ],
+  },
 };

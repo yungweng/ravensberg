@@ -19,6 +19,7 @@ const staticPages: Array<{
     | "never";
 }> = [
   { path: "/", priority: 1, changeFrequency: "monthly" },
+  { path: "/geschichte/", priority: 0.7, changeFrequency: "yearly" },
   { path: "/impressum/", priority: 0.3, changeFrequency: "yearly" },
   { path: "/datenschutz/", priority: 0.3, changeFrequency: "yearly" },
 ];

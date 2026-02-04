@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-bearing student fraternity at the University of Münster, founded 1919. German-language single-page site with two legal sub-routes.
+Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-bearing student fraternity at the University of Münster, founded 1919. German-language single-page site with sub-routes for history and legal pages.
 
 ## Dev Environment
 
@@ -40,7 +40,9 @@ Single scrollable page (`src/app/page.tsx`) with sections in this order:
 8. **Eindrücke & Aktuelles** — static photo gallery + live Instagram feed (blog-style cards)
 9. **Footer** — contact, tricolor stripe, legal links
 
-Legal pages: `/impressum` and `/datenschutz` (separate routes, not part of the scroll page).
+Sub-routes (separate pages, not part of the scroll page):
+- `/geschichte` — full history of the Verbindung (indexed by Google, SEO content page)
+- `/impressum` and `/datenschutz` — legal pages (noindex)
 
 ### Content data
 
@@ -133,12 +135,14 @@ Favicon files (`favicon.ico`, `icon.png`, `apple-icon.png`) live in `src/app/` a
 ### Component conventions
 
 - **Server components by default.** Only add `"use client"` when the component needs hooks, event handlers, or browser APIs.
-- Client components: Navigation, Hero, ScrollReveal, AnimatedHeading, AnimatedCounter, TiltCard, Footer
+- Client components: Navigation, Hero, ScrollReveal, AnimatedHeading, AnimatedCounter, TiltCard, ClickableImage, Footer
 - Reusable wrappers:
   - `Section` — consistent padding/max-width, accepts `id` for scroll nav and `fullBleed` for edge-to-edge content, `bgClassName` for alternating backgrounds
   - `ScrollReveal` — Framer Motion fade-up on scroll, `delay` prop for stagger
   - `AnimatedHeading` — word-by-word reveal, `as` prop for element type
   - `TiltCard` — 3D perspective tilt on mouse hover
+  - `ClickableImage` — image with lightbox on click, hover dimming + magnifying glass icon
+  - `SectionDivider` — decorative gold diamond ornament between sections
 - **All animations must respect `prefers-reduced-motion`** via Framer Motion's `useReducedMotion()` hook.
 
 ### German text

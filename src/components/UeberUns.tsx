@@ -153,6 +153,17 @@ export function UeberUns() {
         </figure>
       </ScrollReveal>
 
+      <ScrollReveal>
+        <div className="text-center mt-10">
+          <a
+            href="/geschichte"
+            className="text-accent hover:underline font-medium"
+          >
+            Mehr zur Geschichte &rarr;
+          </a>
+        </div>
+      </ScrollReveal>
+
       <Lightbox
         src={lightbox?.src ?? ""}
         alt={lightbox?.alt ?? ""}

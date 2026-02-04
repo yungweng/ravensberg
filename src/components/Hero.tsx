@@ -58,7 +58,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
         <h1 className="font-script text-4xl md:text-7xl lg:text-8xl text-white">
-          <span className="sr-only">{titleText}</span>
+          <span className="sr-only">KStV Ravensberg – Katholische Studentenverbindung in Münster</span>
           <span aria-hidden="true">
             {titleText.split(" ").map((word, wordIndex) => {
               const charOffset = titleText.split(" ").slice(0, wordIndex).reduce((acc, w) => acc + w.length + 1, 0);

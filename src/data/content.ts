@@ -5,6 +5,8 @@ export const siteConfig = {
   email: "vorstand@kstv-ravensberg.de",
   instagram: "https://www.instagram.com/kstvravensberg",
   instagramHandle: "@kstvravensberg",
+  facebook: "https://www.facebook.com/KStVRavensberg",
+  facebookHandle: "KStV Ravensberg Münster",
 };
 
 export const willkommen = {

@@ -3,6 +3,7 @@ import { Playfair_Display, Inter, Great_Vibes } from "next/font/google";
 import {
   generateOrganizationSchema,
   generateLocalBusinessSchema,
+  generateFAQSchema,
 } from "@/lib/seo/structured-data";
 import "./globals.css";
 
@@ -12,7 +13,7 @@ const greatVibes = Great_Vibes({ weight: "400", subsets: ["latin"], variable: "-
 
 export const metadata: Metadata = {
   title: {
-    default: "KStV Ravensberg zu Münster",
+    default: "KStV Ravensberg – Studentenverbindung in Münster | Seit 1919",
     template: "%s | KStV Ravensberg",
   },
   description:
@@ -45,11 +46,11 @@ export const metadata: Metadata = {
     canonical: "https://kstvravensberg.de/",
   },
   openGraph: {
-    title: "KStV Ravensberg zu Münster",
+    title: "KStV Ravensberg – Studentenverbindung in Münster | Seit 1919",
     description:
-      "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919.",
+      "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919. Religio, Scientia, Amicitia.",
     url: "https://kstvravensberg.de",
-    siteName: "KStV Ravensberg",
+    siteName: "KStV Ravensberg zu Münster",
     images: [
       {
         url: "https://kstvravensberg.de/images/og-image.png",
@@ -114,6 +115,13 @@ export default function RootLayout({
           // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(generateLocalBusinessSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema()),
           }}
         />
       </head>

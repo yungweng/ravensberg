@@ -75,7 +75,11 @@ export function InstagramFeed({ posts }: InstagramFeedProps) {
             Eindrücke
           </AnimatedHeading>
           <p className="text-muted-fg">
-            Aus über 100 Jahren Vereinsleben
+            Aus über{" "}
+            <a href="/geschichte" className="text-accent hover:underline">
+              100 Jahren
+            </a>{" "}
+            Vereinsleben
           </p>
         </div>
 

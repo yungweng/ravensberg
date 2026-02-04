@@ -24,6 +24,7 @@ export default async function Home() {
       <Vorstand />
       <SectionDivider />
       <UnserHaus />
+      <SectionDivider />
       <UeberUns />
       <SectionDivider />
       <InstagramFeed posts={posts} />

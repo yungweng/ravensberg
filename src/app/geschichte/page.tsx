@@ -39,8 +39,6 @@ export default function GeschichtePage() {
           />
         </section>
 
-        <SectionDivider />
-
         <section>
           <h2 className="font-serif text-xl sm:text-2xl text-foreground mb-3">
             Universit&auml;t und Dachverband
@@ -62,8 +60,6 @@ export default function GeschichtePage() {
             unoptimized
           />
         </section>
-
-        <SectionDivider />
 
         <section>
           <h2 className="font-serif text-xl sm:text-2xl text-foreground mb-3">
@@ -132,8 +128,6 @@ export default function GeschichtePage() {
           />
         </section>
 
-        <SectionDivider />
-
         <section>
           <h2 className="font-serif text-xl sm:text-2xl text-foreground mb-3">
             Das Ravensberg-Haus
@@ -169,8 +163,6 @@ export default function GeschichtePage() {
             ehemalige Familienwappen der Grafen von Ravensberg in ihr Panier.
           </p>
         </section>
-
-        <SectionDivider />
 
         <section>
           <h2 className="font-serif text-xl sm:text-2xl text-foreground mb-3">

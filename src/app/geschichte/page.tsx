@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ClickableImage } from "@/components/ClickableImage";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export default function GeschichtePage() {
@@ -29,13 +29,12 @@ export default function GeschichtePage() {
             Verbindung wuchs rasch: Bereits im Gr&uuml;ndungssemester z&auml;hlte
             der KStV Ravensberg 84 Mitglieder.
           </p>
-          <Image
+          <ClickableImage
             src="/images/geschichte/bildband-1919-gruendung.webp"
-            alt="Gr&uuml;ndungsmitglieder des KStV Ravensberg, 1919"
+            alt="Gründungsmitglieder des KStV Ravensberg, 1919"
             width={800}
             height={500}
-            className="rounded-lg my-6 w-full"
-            unoptimized
+            className="my-6"
           />
         </section>
 
@@ -51,13 +50,12 @@ export default function GeschichtePage() {
             59. Mitglied in den Kartellverband katholischer deutscher
             Studentenvereine (KV) aufgenommen.
           </p>
-          <Image
+          <ClickableImage
             src="/images/geschichte/bildband-1919-portraits.webp"
-            alt="Portraits der fr&uuml;hen Mitglieder des KStV Ravensberg"
+            alt="Portraits der frühen Mitglieder des KStV Ravensberg"
             width={800}
             height={500}
-            className="rounded-lg my-6 w-full"
-            unoptimized
+            className="my-6"
           />
         </section>
 
@@ -93,13 +91,12 @@ export default function GeschichtePage() {
             Gemeinschaft au&szlig;erhalb der universit&auml;ren Strukturen
             fortzuf&uuml;hren.
           </p>
-          <Image
+          <ClickableImage
             src="/images/geschichte/bildband-gruppenfoto-alt.webp"
             alt="Historisches Gruppenfoto des KStV Ravensberg"
             width={800}
             height={500}
-            className="rounded-lg my-6 w-full"
-            unoptimized
+            className="my-6"
           />
         </section>
 
@@ -118,13 +115,12 @@ export default function GeschichtePage() {
             wurde. Nach der Gr&uuml;ndung der Bundesrepublik Deutschland kehrte
             man zur urspr&uuml;nglichen Bezeichnung KStV Ravensberg zur&uuml;ck.
           </p>
-          <Image
+          <ClickableImage
             src="/images/geschichte/bildband-gruppenfoto-alt2.webp"
-            alt="Gruppenfoto nach der Wiederbegr&uuml;ndung"
+            alt="Gruppenfoto nach der Wiederbegründung"
             width={800}
             height={500}
-            className="rounded-lg my-6 w-full"
-            unoptimized
+            className="my-6"
           />
         </section>
 
@@ -140,13 +136,12 @@ export default function GeschichtePage() {
             Mitglieder das Haus, das bis heute als Verbindungshaus dient und
             Mittelpunkt des Bundeslebens ist.
           </p>
-          <Image
+          <ClickableImage
             src="/images/geschichte/ra-haus-zeichnung-gut.webp"
-            alt="Historische Zeichnung des Ravensberg-Hauses in der Raesfeldstra&szlig;e"
+            alt="Historische Zeichnung des Ravensberg-Hauses in der Raesfeldstraße"
             width={800}
             height={500}
-            className="rounded-lg my-6 w-full"
-            unoptimized
+            className="my-6"
           />
         </section>
 

@@ -34,20 +34,6 @@
   animation-play-state: paused;
 }
 
-/* Safe-area insets for iPhone notch / Dynamic Island */
-@supports (padding-top: env(safe-area-inset-top)) {
-  .safe-area-header {
-    padding-top: env(safe-area-inset-top);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-
-  .safe-area-header > nav {
-    padding-left: max(1.5rem, env(safe-area-inset-left));
-    padding-right: max(1.5rem, env(safe-area-inset-right));
-  }
-}
-
 /* Subtle paper/noise texture overlay on body */
 body::before {
   content: "";

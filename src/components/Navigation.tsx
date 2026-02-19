@@ -23,7 +23,15 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+
+      // Update theme-color to match header state so Safari iOS
+      // colors the status bar area around the notch/Dynamic Island
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", isScrolled ? "#FDF8F0" : "#2C1810");
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
@@ -60,7 +68,7 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
 
   return (
     <header
-      className={`safe-area-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-background/95 backdrop-blur-sm shadow-md"
           : "bg-transparent"

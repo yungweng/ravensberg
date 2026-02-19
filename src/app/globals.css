@@ -34,6 +34,13 @@
   animation-play-state: paused;
 }
 
+/* iPhone notch / Dynamic Island: extend header background into safe area */
+@supports (padding-top: env(safe-area-inset-top)) {
+  header.fixed {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
 /* Subtle paper/noise texture overlay on body */
 body::before {
   content: "";

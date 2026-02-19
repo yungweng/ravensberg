@@ -53,7 +53,8 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-4 right-4 md:top-6 md:right-6 text-white/70 hover:text-white transition-colors z-10"
+            className="absolute right-4 md:right-6 text-white/70 hover:text-white transition-colors z-10"
+            style={{ top: "calc(1rem + env(safe-area-inset-top, 0px))" }}
             aria-label="Schließen"
           >
             <svg
@@ -71,9 +72,9 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
             </svg>
           </button>
 
-          {/* Image */}
+          {/* Image — pointer-events-none so clicks pass through to backdrop */}
           <motion.div
-            className="relative w-full h-full max-w-5xl max-h-[85vh]"
+            className="relative w-full h-full max-w-5xl max-h-[85vh] pointer-events-none"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}

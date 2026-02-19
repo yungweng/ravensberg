@@ -65,8 +65,9 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
           ? "bg-background/95 backdrop-blur-sm shadow-md"
           : "bg-transparent"
       }`}
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <nav className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <nav className="max-w-6xl mx-auto px-[max(1.5rem,env(safe-area-inset-left))] pr-[max(1.5rem,env(safe-area-inset-right))] flex items-center justify-between h-16">
         <button
           type="button"
           onClick={() => {
@@ -146,7 +147,7 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
           mobileOpen ? "max-h-96" : "max-h-0"
         } ${scrolled ? "bg-background/95 backdrop-blur-sm" : "bg-foreground/90 backdrop-blur-sm"}`}
       >
-        <ul className="px-6 py-4 flex flex-col gap-3">
+        <ul className="px-[max(1.5rem,env(safe-area-inset-left))] py-4 flex flex-col gap-3">
           {navItems.map((item) => {
             const sectionId = item.href.replace("#", "");
             const isActive = activeSection === sectionId;

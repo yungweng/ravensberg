@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { duration } from "@/lib/motion";
 
 interface LightboxProps {
   src: string;
@@ -38,7 +39,7 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: duration.micro }}
         >
           {/* Backdrop */}
           {/* biome-ignore lint/a11y/noStaticElementInteractions: backdrop click-to-close is standard lightbox UX */}
@@ -78,7 +79,7 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: duration.micro }}
           >
             <Image
               src={src}
@@ -94,7 +95,7 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
             className="absolute bottom-4 md:bottom-6 text-white/60 text-sm"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
+            transition={{ delay: 0.08 }}
           >
             {alt}
           </motion.p>

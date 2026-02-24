@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/data/content";
+import { duration } from "@/lib/motion";
 
 const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("Zimmeranfrage \u2013 KStV Ravensberg")}`;
 
@@ -60,7 +61,7 @@ export function RoomBanner() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
+      transition={{ duration: duration.normal, delay: 0.4, ease: "easeOut" }}
     >
       {content}
     </motion.div>

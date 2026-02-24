@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/data/content";
+import { duration } from "@/lib/motion";
 
 export function Footer() {
   const ref = useRef<HTMLDivElement>(null);
@@ -21,7 +22,7 @@ export function Footer() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0 }}
+            transition={{ duration: duration.normal, delay: 0 }}
           >
             <div className="flex items-center gap-3 mb-2">
               <Image
@@ -41,7 +42,7 @@ export function Footer() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: duration.normal, delay: 0.05 }}
           >
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-3 text-background/80">
               Kontakt
@@ -82,7 +83,7 @@ export function Footer() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={shouldAnimate ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: duration.normal, delay: 0.1 }}
           >
             <h4 className="font-semibold text-sm uppercase tracking-wider mb-3 text-background/80">
               Folge uns
@@ -139,7 +140,7 @@ export function Footer() {
           className="flex h-full w-full"
           initial={{ x: "-100%" }}
           animate={shouldAnimate ? { x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          transition={{ duration: duration.slow, delay: 0.15, ease: "easeOut" }}
         >
           <div className="flex-1" style={{ backgroundColor: "#1B5E20" }} />
           <div className="flex-1" style={{ backgroundColor: "#F9A825" }} />

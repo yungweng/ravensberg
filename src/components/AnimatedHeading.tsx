@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
+import { duration, stagger } from "@/lib/motion";
 
 interface AnimatedHeadingProps {
   children: string;
@@ -32,8 +33,8 @@ export function AnimatedHeading({ children, as: Tag = "h2", className = "" }: An
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{
-              duration: 0.4,
-              delay: i * 0.06,
+              duration: duration.fast,
+              delay: i * stagger,
               ease: "easeOut",
             }}
           >

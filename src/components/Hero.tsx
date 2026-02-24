@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
+import { duration, stagger } from "@/lib/motion";
 
 const titleText = "KStV Ravensberg";
 
@@ -71,8 +72,8 @@ export function Hero() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{
-                        duration: 0.4,
-                        delay: prefersReducedMotion ? 0 : 0.3 + (charOffset - 1) * 0.06,
+                        duration: duration.fast,
+                        delay: prefersReducedMotion ? 0 : 0.15 + (charOffset - 1) * stagger,
                         ease: "easeOut",
                       }}
                     >
@@ -87,8 +88,8 @@ export function Hero() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.4,
-                        delay: prefersReducedMotion ? 0 : 0.3 + (charOffset + charIndex) * 0.06,
+                        duration: duration.fast,
+                        delay: prefersReducedMotion ? 0 : 0.15 + (charOffset + charIndex) * stagger,
                         ease: "easeOut",
                       }}
                     >
@@ -105,8 +106,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 1,
-            delay: prefersReducedMotion ? 0 : 0.3 + titleText.length * 0.06 + 0.3,
+            duration: duration.slow,
+            delay: prefersReducedMotion ? 0 : 0.15 + titleText.length * stagger + 0.15,
           }}
         >
           zu Münster
@@ -119,8 +120,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.8,
-            delay: prefersReducedMotion ? 0 : 0.3 + titleText.length * 0.06 + 0.6,
+            duration: duration.slow,
+            delay: prefersReducedMotion ? 0 : 0.15 + titleText.length * stagger + 0.3,
           }}
         >
           <svg

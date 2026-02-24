@@ -20,18 +20,52 @@ const HouseIcon = () => (
 );
 
 const linkClasses =
-  "bg-accent text-background font-serif font-semibold text-sm shadow-lg hover:bg-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 print:hidden";
+  "bg-accent text-background font-serif font-semibold text-sm shadow-lg hover:bg-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 print:hidden room-banner-glow";
 
 export function RoomBanner() {
   const prefersReducedMotion = useReducedMotion();
 
-  const content = (
+  if (prefersReducedMotion) {
+    return (
+      <>
+        <a
+          href={mailtoHref}
+          aria-label="Zimmeranfrage per E-Mail senden"
+          className={`fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-3 px-2.5 py-4 rounded-r-lg ${linkClasses}`}
+        >
+          <HouseIcon />
+          <span
+            style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+          >
+            Wir haben freie Zimmer
+          </span>
+        </a>
+        <a
+          href={mailtoHref}
+          aria-label="Zimmeranfrage per E-Mail senden"
+          className={`fixed bottom-0 left-0 right-0 z-40 flex md:hidden items-center justify-center gap-2 px-4 py-3 ${linkClasses}`}
+        >
+          <HouseIcon />
+          <span>Wir haben freie Zimmer</span>
+        </a>
+      </>
+    );
+  }
+
+  return (
     <>
-      {/* Desktop: vertical side banner */}
-      <a
+      {/* Desktop: slide in from left */}
+      <motion.a
         href={mailtoHref}
         aria-label="Zimmeranfrage per E-Mail senden"
         className={`fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-3 px-2.5 py-4 rounded-r-lg ${linkClasses}`}
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: duration.slow,
+          delay: 1,
+          ease: [0.22, 1, 0.36, 1],
+        }}
       >
         <HouseIcon />
         <span
@@ -39,31 +73,24 @@ export function RoomBanner() {
         >
           Wir haben freie Zimmer
         </span>
-      </a>
+      </motion.a>
 
-      {/* Mobile: horizontal bottom banner */}
-      <a
+      {/* Mobile: slide up from bottom */}
+      <motion.a
         href={mailtoHref}
         aria-label="Zimmeranfrage per E-Mail senden"
         className={`fixed bottom-0 left-0 right-0 z-40 flex md:hidden items-center justify-center gap-2 px-4 py-3 ${linkClasses}`}
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: duration.slow,
+          delay: 1,
+          ease: [0.22, 1, 0.36, 1],
+        }}
       >
         <HouseIcon />
         <span>Wir haben freie Zimmer</span>
-      </a>
+      </motion.a>
     </>
-  );
-
-  if (prefersReducedMotion) {
-    return content;
-  }
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: duration.normal, delay: 0.4, ease: "easeOut" }}
-    >
-      {content}
-    </motion.div>
   );
 }

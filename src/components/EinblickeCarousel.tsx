@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import { useReducedMotion } from "framer-motion";
+import { duration } from "@/lib/motion";
 import {
   einblickeRow1,
   einblickeRow2,
@@ -32,7 +33,7 @@ function MarqueeRow({
         style={{
           animation: prefersReducedMotion
             ? "none"
-            : `${animationName} 120s linear infinite`,
+            : `${animationName} ${duration.marquee}s linear infinite`,
         }}
       >
         {[...images, ...images].map((img, i) => (

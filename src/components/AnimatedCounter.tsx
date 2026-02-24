@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
+import { duration as motionDuration } from "@/lib/motion";
 
 interface AnimatedCounterProps {
   target: number;
@@ -13,7 +14,7 @@ interface AnimatedCounterProps {
 
 export function AnimatedCounter({
   target,
-  duration = 2000,
+  duration = motionDuration.counter * 1000,
   prefix = "",
   suffix = "",
   className = "",

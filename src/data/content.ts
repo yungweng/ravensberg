@@ -43,6 +43,11 @@ export const ueberUns = {
   wahlspruch: "\u201EVorwärts! Aufwärts!\u201C",
 };
 
+export const kontakt = {
+  heading: "Kontakt",
+  text: "Du studierst in Münster und möchtest uns kennenlernen? Oder du bist Alter Herr und möchtest dich melden? Schreib uns einfach eine Nachricht oder komm bei uns vorbei.",
+};
+
 export const navigation = [
   { label: "Willkommen", href: "#willkommen" },
   { label: "Prinzipien", href: "#prinzipien" },
@@ -50,4 +55,5 @@ export const navigation = [
   { label: "Unser Haus", href: "#unser-haus" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Eindrücke", href: "#eindruecke" },
+  { label: "Kontakt", href: "#kontakt" },
 ];

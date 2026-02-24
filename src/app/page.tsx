@@ -6,6 +6,7 @@ import { Vorstand } from "@/components/Vorstand";
 import { UnserHaus } from "@/components/UnserHaus";
 import { UeberUns } from "@/components/UeberUns";
 import { InstagramFeed } from "@/components/InstagramFeed";
+import { Kontakt } from "@/components/Kontakt";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { RoomBanner } from "@/components/RoomBanner";
@@ -29,6 +30,8 @@ export default async function Home() {
       <UeberUns />
       <SectionDivider />
       <InstagramFeed posts={posts} />
+      <SectionDivider />
+      <Kontakt />
       <Footer />
       <RoomBanner />
     </>

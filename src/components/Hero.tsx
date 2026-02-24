@@ -111,6 +111,33 @@ export function Hero() {
         >
           zu Münster
         </motion.p>
+
+        {/* Contact button */}
+        <motion.a
+          href="#kontakt"
+          className="mt-8 flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/30 text-white/80 text-sm font-medium hover:text-white hover:border-white/50 transition-colors"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: prefersReducedMotion ? 0 : 0.3 + titleText.length * 0.06 + 0.6,
+          }}
+        >
+          <svg
+            aria-hidden="true"
+            className="w-4 h-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          Kontakt
+        </motion.a>
       </div>
 
       {/* Scroll indicator */}

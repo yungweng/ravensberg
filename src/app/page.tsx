@@ -21,6 +21,8 @@ export default async function Home() {
       <Hero />
       <Willkommen />
       <SectionDivider />
+      <Kontakt />
+      <SectionDivider />
       <Prinzipien />
       <SectionDivider />
       <Vorstand />
@@ -30,8 +32,6 @@ export default async function Home() {
       <UeberUns />
       <SectionDivider />
       <InstagramFeed posts={posts} />
-      <SectionDivider />
-      <Kontakt />
       <Footer />
       <RoomBanner />
     </>

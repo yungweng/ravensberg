@@ -50,10 +50,10 @@ export const kontakt = {
 
 export const navigation = [
   { label: "Willkommen", href: "#willkommen" },
+  { label: "Kontakt", href: "#kontakt" },
   { label: "Prinzipien", href: "#prinzipien" },
   { label: "Vorstand", href: "#vorstand" },
   { label: "Unser Haus", href: "#unser-haus" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Eindrücke", href: "#eindruecke" },
-  { label: "Kontakt", href: "#kontakt" },
 ];

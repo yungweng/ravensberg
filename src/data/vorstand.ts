@@ -8,14 +8,14 @@ export interface VorstandMember {
 export const vorstand: VorstandMember[] = [
   {
     name: "Henri Paul Kasten",
-    role: "Senior (x)",
+    role: "Senior (X)",
     image: "/images/vorstand/henri-paul-kasten.webp",
     description:
       "Als Senior führe ich den KStV Ravensberg. Intern leite ich die Convente und treffe die zentralen Entscheidungen, extern vertrete ich unseren Verein nach außen \u2014 gegenüber dem KV, anderen Verbindungen und der Universität.",
   },
   {
     name: "Alex Bullermann",
-    role: "Consenior (xx)",
+    role: "Consenior (VX)",
     image: "/images/vorstand/alex-bullermann.webp",
     description:
       "Als Consenior vertrete ich den Senior und bin seine rechte Hand. Mein Schwerpunkt liegt auf der Planung und Umsetzung unserer Veranstaltungen \u2014 von Kneipen und Kommersen bis zu Vortragsabenden und geselligen Runden auf dem Haus.",

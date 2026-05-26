@@ -166,6 +166,24 @@ After deploying new content, **Hostinger's CDN/LiteSpeed cache may serve stale c
 1. **hPanel** → Websites → Dashboard → **CDN** → Flush cache
 2. **hPanel** → Advanced → **Cache Manager** → Purge All
 
+### Scheduled workflows get auto-disabled (recurring ~every 60 days)
+
+GitHub disables scheduled (cron) workflows after **60 days with no commits**. Scheduled runs themselves do not count as activity — only commits do. Since the only regularly-changing content is the Vorstand (~2x/year), both `deploy.yml` and `refresh-instagram-token.yml` get auto-disabled roughly every 60 days. GitHub emails the repo admin when this happens.
+
+**Symptom:** On the live site, the Instagram "Aktuelles" cards still show captions, dates, and links, but the **images are broken**. The static build bakes in Instagram CDN URLs (`scontent.cdninstagram.com`) that are signed and expire after a few days; once the daily deploy stops, those URLs go stale and 404. Don't chase the Instagram token first — it's usually fine. (A truly missing token would hide the whole Aktuelles block, not just the images.)
+
+**Fix** — re-enable both workflows and trigger a fresh build:
+
+```
+gh workflow enable deploy.yml
+gh workflow enable refresh-instagram-token.yml
+gh workflow run deploy.yml
+```
+
+Then purge the Hostinger CDN cache (above) if the site still looks stale.
+
+**Do not add an empty-commit "keepalive" workflow** to work around this — that pattern was disabled by GitHub Staff as a Terms of Service violation for circumventing the 60-day inactivity policy. Compliant alternatives, if ever needed: self-host the Instagram images at build time (so stale URLs stop breaking the site), or remove the `schedule:` trigger and dispatch the deploy from an external scheduler via the `workflow_dispatch` API.
+
 ### WordPress backup
 
 A full WordPress backup (files + database) from 2026-02-03 is stored locally at `~/Desktop/ravensberg-wordpress-backup/` with a restore guide. Backups also remain on the server at `~/wordpress-backup-20260203.tar.gz` and `~/wordpress-db-backup-20260203.sql`.

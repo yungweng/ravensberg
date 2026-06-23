@@ -47,7 +47,7 @@ export default function GeschichtePage() {
             Wilhelms-Universit&auml;t M&uuml;nster den Verein als offizielle
             Hochschulgruppe. Nur wenige Wochen sp&auml;ter, auf der 47.
             Generalversammlung am 13. Juni 1919, wurde der KStV Ravensberg als
-            59. Mitglied in den Kartellverband katholischer deutscher
+            58. Mitglied in den Kartellverband katholischer deutscher
             Studentenvereine (KV) aufgenommen.
           </p>
           <ClickableImage

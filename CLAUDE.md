@@ -10,8 +10,17 @@ Website for KStV Ravensberg zu Münster — a Catholic, non-dueling, color-beari
 
 Uses [Devbox](https://www.jetify.com/devbox) + [direnv](https://direnv.net/) for reproducible tooling. On `cd` into the repo (with direnv hooked into your shell), the environment auto-activates.
 
-- `devbox install` — install pinned toolchain (node, bun, biome)
+- `devbox install` — install pinned toolchain (node, bun, poppler-utils, imagemagick)
 - Versions are locked in `devbox.lock` (committed)
+- `devbox.json` pins **exact** versions, not `@latest`, so local and CI agree. The
+  bun version there must match `bun-version` in both GitHub workflows — bump them
+  together.
+- Biome is **not** a Devbox package. It comes from the `@biomejs/biome`
+  devDependency, which is what `bun run lint` and CI both resolve. Keeping a
+  second copy in Devbox only causes version drift.
+- A bun installed outside Devbox (e.g. `~/.bun/bin/bun` from the curl installer)
+  shadows the pinned one depending on PATH order. Run `bun --version` inside the
+  repo and expect the pinned version; use `devbox run -- bun ...` if unsure.
 
 ## Commands
 

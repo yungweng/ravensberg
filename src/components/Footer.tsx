@@ -26,10 +26,10 @@ export function Footer() {
           >
             <div className="flex items-center gap-3 mb-2">
               <Image
-                src="/images/wappen/kleines-wappen.webp"
+                src="/images/wappen/wappen-icon.webp"
                 alt="Wappen KStV Ravensberg"
-                width={40}
-                height={48}
+                width={137}
+                height={160}
                 className="h-10 w-auto"
                 unoptimized
               />

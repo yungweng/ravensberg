@@ -109,7 +109,7 @@
       "mcp__open-knowledge",
       "mcp__pencil",
       "mcp__slack",
-      "mcp__plugin_telegram_telegram",
+      "mcp__telegram",
       "WebFetch(domain:docs.anthropic.com)",
       "WebSearch",
       "WebFetch"

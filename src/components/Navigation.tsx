@@ -86,11 +86,12 @@ export function Navigation({ hasInstagramPosts = false }: NavigationProps) {
           }`}
         >
           <Image
-            src="/images/wappen/kleines-wappen.webp"
+            src="/images/wappen/wappen-icon.webp"
             alt="Wappen KStV Ravensberg"
-            width={32}
-            height={38}
-            className="h-8 w-auto"
+            width={137}
+            height={160}
+            className="h-10 w-auto"
+            priority
             unoptimized
           />
           KStV Ravensberg

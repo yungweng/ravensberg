@@ -63,8 +63,7 @@ export default function HausPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/45 to-foreground/25" />
           <div className="relative mx-auto w-full max-w-6xl px-6 pt-32 pb-16">
             <p className="mb-3 text-sm tracking-[0.2em] text-white/70 uppercase">{hausPage.subtitle}</p>
-            <h1 className="mb-6 font-serif text-4xl text-white md:text-6xl">{hausPage.title}</h1>
-            <p className="mb-8 max-w-xl leading-relaxed text-white/85">{hausPage.intro}</p>
+            <h1 className="mb-8 font-serif text-4xl text-white md:text-6xl">{hausPage.title}</h1>
             <a href={zimmerAnfrageHref} className={ctaClasses}>
               <HouseIcon />
               {hausPage.ctaHeading}

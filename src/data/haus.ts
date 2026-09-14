@@ -31,8 +31,6 @@ const quote = (text: string): HausGalleryQuote => ({ kind: "quote", text });
 export const hausPage = {
   title: "Unser Haus",
   subtitle: "Raesfeldstraße 32, Kreuzviertel",
-  intro:
-    "Seit 1962 wohnen Ravensberger in der Raesfeldstraße. Altbau, hohe Decken, Dielen, ein paar Stockwerke Treppenhaus und eine Küche, in der die längsten Abende anfangen. Schau dich um.",
   ctaHeading: "Wir haben Zimmer frei",
   ctaText:
     "Zimmer im Kreuzviertel, wenige Minuten zur Uni, zu einer Miete, die in Münster selten geworden ist. Schreib uns kurz, wir zeigen dir das Haus persönlich.",
@@ -52,21 +50,17 @@ export const hausGalerie: HausGalleryItem[] = [
   photo("07-zimmer-podest", "Zimmer mit Schlafpodest und Leiter"),
   photo("08-zimmer-holzdecke", "Zimmer mit Holzdecke und Einbauschrank"),
 
-  quote("Zwei Türen weiter wohnt immer jemand, der noch wach ist."),
-
   photo("09-zimmer-bogenfenster", "Helles Zimmer mit Rundbogenfenster"),
   photo("10-zimmer-einbau", "Zimmer mit Holzeinbau und Hochbett"),
   photo("11-zimmer-hell", "Leeres Zimmer mit hoher Decke und Dielenboden"),
   photo("12-zimmer-leer", "Zimmer mit Blick zur Tür und Dielenboden"),
 
-  quote("Die Küche ist der Ort, an dem aus Mitbewohnern Freunde werden."),
+  quote("Zwei Türen weiter wohnt immer jemand, der noch wach ist."),
 
   photo("13-kueche-esstisch", "Gemeinschaftsküche mit Esstisch und Rundbogenfenstern"),
   photo("14-kueche-wohnkueche", "Wohnküche mit langem Tisch und Fenster zum Hof"),
   photo("15-flur-glastueren", "Wohnungsflur mit alten Glastüren"),
   photo("16-flur-durchgang", "Flur mit Durchgang zur Gemeinschaftsküche"),
-
-  quote("Altbau heißt: hohe Decken, große Fenster und ein Treppenhaus, das man hört."),
 
   photo("17-bad-dusche", "Badezimmer mit Dusche und Waschmaschine"),
   photo("18-bad-wanne", "Badezimmer mit Dusche, Waschbecken und Waschmaschine"),

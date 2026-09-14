@@ -39,7 +39,7 @@ function MarqueeRow({
         {[...images, ...images].map((img, i) => (
           <button
             type="button"
-            key={`${img.src}-${i}`}
+            key={`${img.src}-${i < images.length ? "a" : "b"}`}
             onClick={() => onImageClick(img)}
             className="relative flex-shrink-0 h-[220px] md:h-[280px] aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group/img bg-muted"
           >

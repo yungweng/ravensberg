@@ -1,0 +1,10 @@
+[wt]
+	base = main
+	port = "PORT:3000"
+	bootstrap = "devbox run -- bun install --frozen-lockfile"
+	disposable = .devbox
+	disposable = .next
+	disposable = next-env.d.ts
+	disposable = node_modules
+	disposable = out
+	disposable = tsconfig.tsbuildinfo

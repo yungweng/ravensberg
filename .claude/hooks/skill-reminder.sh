@@ -28,6 +28,11 @@ if [[ -d "$project_root/.claude/commands" ]]; then
     done < <(find "$project_root/.claude/commands" -maxdepth 1 -name "*.md" -type f 2>/dev/null | sort)
 fi
 
+# Exit silently if nothing to report
+if [[ ${#skills[@]} -eq 0 ]]; then
+    exit 0
+fi
+
 # Build vertical list
 skill_list=""
 for skill in "${skills[@]}"; do
@@ -35,14 +40,14 @@ for skill in "${skills[@]}"; do
 - ${skill}"
 done
 
-# Output compact JSON reminder
-cat <<EOF
-{
-  "hookSpecificOutput": {
-    "hookEventName": "UserPromptSubmit",
-    "additionalContext": "<skill-reminder>USE SKILLS ACTIVELY! Available:${skill_list}
+context="<skill-reminder>USE SKILLS ACTIVELY! Available:${skill_list}
 
 Invoke via Skill tool before acting.</skill-reminder>"
+
+# Emit JSON via jq so newlines are properly escaped
+jq -n --arg context "$context" '{
+  hookSpecificOutput: {
+    hookEventName: "UserPromptSubmit",
+    additionalContext: $context
   }
-}
-EOF
+}'

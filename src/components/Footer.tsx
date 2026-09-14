@@ -163,6 +163,9 @@ export function Footer() {
             </a>
           </p>
           <div className="flex gap-6">
+            <Link href="/haus" className="hover:text-background transition-colors">
+              Unser Haus
+            </Link>
             <Link href="/geschichte" className="hover:text-background transition-colors">
               Geschichte
             </Link>

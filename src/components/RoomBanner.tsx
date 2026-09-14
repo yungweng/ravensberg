@@ -1,10 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { siteConfig } from "@/data/content";
 import { duration } from "@/lib/motion";
-
-const mailtoHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent("Zimmeranfrage \u2013 KStV Ravensberg")}`;
+import { zimmerAnfrageHref as mailtoHref } from "@/lib/zimmerAnfrage";
 
 const HouseIcon = () => (
   <svg
@@ -37,7 +35,7 @@ export function RoomBanner() {
           <span
             style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
           >
-            Wir haben freie Zimmer
+            Wir haben Zimmer frei
           </span>
         </a>
         <a
@@ -46,7 +44,7 @@ export function RoomBanner() {
           className={`fixed bottom-0 left-0 right-0 z-40 flex md:hidden items-center justify-center gap-2.5 px-5 py-3.5 ${linkClasses}`}
         >
           <HouseIcon />
-          <span>Wir haben freie Zimmer</span>
+          <span>Wir haben Zimmer frei</span>
         </a>
       </>
     );
@@ -71,7 +69,7 @@ export function RoomBanner() {
         <span
           style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
         >
-          Wir haben freie Zimmer
+          Wir haben Zimmer frei
         </span>
       </motion.a>
 
@@ -89,7 +87,7 @@ export function RoomBanner() {
         }}
       >
         <HouseIcon />
-        <span>Wir haben freie Zimmer</span>
+        <span>Wir haben Zimmer frei</span>
       </motion.a>
     </>
   );

@@ -107,6 +107,20 @@ export const pageMetadata = {
       "Datenschutzerklärung des KStV Ravensberg zu Münster — Informationen zum Umgang mit personenbezogenen Daten.",
     noindex: true,
   },
+  haus: {
+    title: "Unser Haus",
+    description:
+      "Das Haus des KStV Ravensberg in der Raesfeldstraße 32 im Münsteraner Kreuzviertel: Zimmer, Gemeinschaftsküche, Altbau. Wir haben Zimmer frei.",
+    noindex: false,
+    keywords: [
+      "Zimmer Münster",
+      "WG Zimmer Münster",
+      "Wohnen Kreuzviertel Münster",
+      "Studentenwohnheim Münster",
+      "Verbindungshaus Münster",
+      "Raesfeldstraße 32",
+    ],
+  },
   geschichte: {
     title: "Geschichte",
     description:

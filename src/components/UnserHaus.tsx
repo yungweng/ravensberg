@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { unserHaus, siteConfig } from "@/data/content";
 import { Section } from "@/components/Section";
@@ -101,6 +102,34 @@ export function UnserHaus() {
             </ScrollReveal>
           ))}
         </div>
+        {/* Link to the full house tour */}
+        <ScrollReveal delay={0.15}>
+          <div className="mt-12 text-center">
+            <Link
+              href="/haus"
+              className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-accent px-7 py-4 font-serif text-base font-semibold text-background shadow-lg transition-colors duration-200 hover:bg-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+            >
+              Alle Bilder vom Haus ansehen
+              <svg
+                aria-hidden="true"
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </Link>
+            <p className="text-muted-fg text-sm mt-3">
+              Zimmer, Küche, Treppenhaus &ndash; und wir haben Zimmer frei.
+            </p>
+          </div>
+        </ScrollReveal>
+
         {/* Google Maps embed */}
         <ScrollReveal delay={0.2}>
           <div className="mt-16">

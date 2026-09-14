@@ -10,14 +10,21 @@ interface LightboxProps {
   alt: string;
   isOpen: boolean;
   onClose: () => void;
+  /** Optional gallery navigation — omit both for a single image. */
+  onPrev?: () => void;
+  onNext?: () => void;
+  /** Position within the gallery, e.g. "3 / 21". */
+  counter?: string;
 }
 
-export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
+export function Lightbox({ src, alt, isOpen, onClose, onPrev, onNext, counter }: LightboxProps) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev?.();
+      if (e.key === "ArrowRight") onNext?.();
     },
-    [onClose],
+    [onClose, onPrev, onNext],
   );
 
   useEffect(() => {
@@ -75,6 +82,7 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
 
           {/* Image — pointer-events-none so clicks pass through to backdrop */}
           <motion.div
+            key={src}
             className="relative w-full h-full max-w-5xl max-h-[85vh] pointer-events-none"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -89,6 +97,56 @@ export function Lightbox({ src, alt, isOpen, onClose }: LightboxProps) {
               unoptimized
             />
           </motion.div>
+
+          {/* Gallery arrows */}
+          {onPrev && (
+            <button
+              type="button"
+              onClick={onPrev}
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10"
+              aria-label="Vorheriges Bild"
+            >
+              <svg
+                aria-hidden="true"
+                className="w-8 h-8 md:w-10 md:h-10 drop-shadow-lg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+          )}
+          {onNext && (
+            <button
+              type="button"
+              onClick={onNext}
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 p-2 text-white/70 hover:text-white transition-colors z-10"
+              aria-label="Nächstes Bild"
+            >
+              <svg
+                aria-hidden="true"
+                className="w-8 h-8 md:w-10 md:h-10 drop-shadow-lg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          )}
+
+          {counter && (
+            <p className="absolute left-4 md:left-6 text-white/50 text-sm tabular-nums" style={{ top: "calc(1rem + env(safe-area-inset-top, 0px))" }}>
+              {counter}
+            </p>
+          )}
 
           {/* Caption */}
           <motion.p

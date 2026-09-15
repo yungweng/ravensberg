@@ -164,7 +164,7 @@ export function Footer() {
           </p>
           <div className="flex gap-6">
             <Link href="/haus" className="hover:text-background transition-colors">
-              Unser Haus
+              Wohnetagen
             </Link>
             <Link href="/geschichte" className="hover:text-background transition-colors">
               Geschichte

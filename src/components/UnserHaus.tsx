@@ -109,7 +109,7 @@ export function UnserHaus() {
               href="/haus"
               className="inline-flex items-center justify-center gap-2.5 rounded-lg bg-accent px-7 py-4 font-serif text-base font-semibold text-background shadow-lg transition-colors duration-200 hover:bg-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             >
-              Alle Bilder vom Haus ansehen
+              Unsere Wohnetagen ansehen
               <svg
                 aria-hidden="true"
                 className="w-4 h-4"

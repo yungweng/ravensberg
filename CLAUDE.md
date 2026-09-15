@@ -55,7 +55,7 @@ Single scrollable page (`src/app/page.tsx`) with sections in this order:
 Section backgrounds **alternate** cream (`bg-background`, default) / muted (`bg-muted`, via `Section`'s `bgClassName`), starting cream at Willkommen. Cards contrast their section: on a muted section use `bg-background` cards; on a cream section use `bg-muted` cards. Adding or reordering a section flips the parity of everything after it, so re-check the whole sequence when you do.
 
 Sub-routes (separate pages, not part of the scroll page):
-- `/haus` — house tour: hero, 21-photo gallery, "Wir haben Zimmer frei" CTA → see [Haus-Galerie](#haus-galerie)
+- `/haus` — "Unsere Wohnetagen": hero, 21-photo gallery, "Wir haben Zimmer frei" CTA → see [Haus-Galerie](#haus-galerie)
 - `/geschichte` — full history of the Verbindung (indexed by Google, SEO content page)
 - `/impressum` and `/datenschutz` — legal pages (noindex)
 
@@ -91,8 +91,14 @@ bun run import:semester -- \
 
 ### Haus-Galerie
 
-`/haus` is the conversion page: it shows the house so visitors can picture living
-there, and every path on it ends at the "Wir haben Zimmer frei" mailto.
+`/haus` is the conversion page: it shows the Wohnetagen so visitors can picture
+living there, and every path on it ends at the "Wir haben Zimmer frei" mailto.
+
+The page is titled "Unsere Wohnetagen", not "Unser Haus": the photos cover the
+residential floors only, not the Kneipe or the event rooms. The route stays
+`/haus` — short and the better search term. Do not claim the page shows the
+whole house, and keep the copy off the rent as a selling point (the Verein
+does not want to advertise with it).
 
 - Photos live in `public/images/haus-galerie/` as WebP, portrait 3:4, ~1400px on
   the long edge. The numeric filename prefix (`01-…` … `21-…`) is only a hint;

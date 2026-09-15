@@ -1,6 +1,6 @@
 /**
- * Content for the /haus subpage — the house tour that turns visitors into
- * Zimmeranfragen. The gallery is a curated sequence: arriving in the hallway,
+ * Content for the /haus subpage — a tour of the Wohnetagen (the residential
+ * floors, not the whole house) that turns visitors into Zimmeranfragen. The gallery is a curated sequence: arriving in the hallway,
  * the rooms themselves, the shared spaces, then the house around them.
  *
  * `quote` entries are rendered as pull-quote cards inside the same grid, so
@@ -29,11 +29,11 @@ const photo = (file: string, alt: string): HausGalleryPhoto => ({
 const quote = (text: string): HausGalleryQuote => ({ kind: "quote", text });
 
 export const hausPage = {
-  title: "Unser Haus",
+  title: "Unsere Wohnetagen",
   subtitle: "Raesfeldstraße 32, Kreuzviertel",
   ctaHeading: "Wir haben Zimmer frei",
   ctaText:
-    "Zimmer im Kreuzviertel, wenige Minuten zur Uni, zu einer Miete, die in Münster selten geworden ist. Schreib uns kurz, wir zeigen dir das Haus persönlich.",
+    "Zimmer im Kreuzviertel, wenige Minuten zur Uni und in die Innenstadt. Schreib uns kurz, wir zeigen dir die Etagen persönlich.",
   ctaLabel: "Zimmer anfragen",
 };
 
@@ -41,7 +41,7 @@ export const hausGalerie: HausGalleryItem[] = [
   photo("01-flur-farben", "Flur im Ravensberg-Haus mit den Verbindungsfarben Grün, Gold und Rot an der Wand"),
   photo("02-treppenhaus-spindel", "Blick von oben in das Treppenhaus des Ravensberg-Hauses"),
 
-  quote("Ich bin wegen der Miete gekommen und wegen der Leute geblieben."),
+  quote("Man kommt wegen des Zimmers und bleibt wegen der Leute."),
 
   photo("03-zimmer-erker", "Zimmer mit Erker und Rundbogenfenstern"),
   photo("04-zimmer-holzbalken", "Zimmer mit offener Holzbalkendecke und Schreibtisch am Fenster"),
@@ -66,7 +66,7 @@ export const hausGalerie: HausGalleryItem[] = [
   photo("18-bad-wanne", "Badezimmer mit Dusche, Waschbecken und Waschmaschine"),
   photo("19-waschraum", "Waschraum mit zwei Waschbecken"),
   photo("20-waschraum-fenster", "Waschraum mit zwei Waschbecken und Fenster"),
-  photo("21-treppenhaus-holz", "Holztreppe im Treppenhaus des Ravensberg-Hauses"),
+  photo("21-treppenhaus-holz", "Blick über das Treppenhaus des Ravensberg-Hauses"),
 
   quote("Den Rest kann man schlecht fotografieren. Komm vorbei."),
 ];

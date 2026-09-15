@@ -32,7 +32,9 @@ export function generatePageMetadata({
       : `${title} | ${siteConfig.fullName}`;
 
   return {
-    title: fullTitle,
+    // `absolute` opts out of the root layout's "%s | KStV Ravensberg" template —
+    // fullTitle already carries the site name, and the template would double it.
+    title: { absolute: fullTitle },
     description,
     keywords: [
       "KStV Ravensberg",
@@ -108,9 +110,9 @@ export const pageMetadata = {
     noindex: true,
   },
   haus: {
-    title: "Unser Haus",
+    title: "Unsere Wohnetagen",
     description:
-      "Das Haus des KStV Ravensberg in der Raesfeldstraße 32 im Münsteraner Kreuzviertel: Zimmer, Gemeinschaftsküche, Altbau. Wir haben Zimmer frei.",
+      "Die Wohnetagen des KStV Ravensberg in der Raesfeldstraße 32 im Münsteraner Kreuzviertel: Zimmer, Gemeinschaftsküche, Altbau. Wir haben Zimmer frei.",
     noindex: false,
     keywords: [
       "Zimmer Münster",

@@ -1,0 +1,445 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KStV Ravensberg//SemPro WiSe 2026-27//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ravensberg WS 26/27
+X-WR-TIMEZONE:Europe/Berlin
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:ravensberg-ws2627-000@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+TRANSP:TRANSPARENT
+SUMMARY:Semesterbeginn WiSe 2026/27
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-001@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261008T160000
+DTEND;TZID=Europe/Berlin:20261008T190000
+SUMMARY:Haus- und Gartenarbeitstag
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-002@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261010T180000
+DTEND;TZID=Europe/Berlin:20261010T210000
+SUMMARY:Semesterantrittsessen
+DESCRIPTION:Beginn 18:00 c.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-003@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+TRANSP:TRANSPARENT
+SUMMARY:Vorlesungsbeginn
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-004@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261012T200000
+DTEND;TZID=Europe/Berlin:20261012T220000
+SUMMARY:1. Aktivenconvent
+DESCRIPTION:Beginn 20:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-005@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261013T190000
+DTEND;TZID=Europe/Berlin:20261013T220000
+SUMMARY:Semesterantrittsgottesdienst in der St. Lamberti-Kirche
+DESCRIPTION:Beginn 19:00 s.t.\nAnschl. Fidulitas bei e.S.V. KStV Germania\n
+ Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+LOCATION:St. Lamberti-Kirche\, Lambertikirchplatz\, 48143 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-006@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261020T180000
+DTEND;TZID=Europe/Berlin:20261020T200000
+SUMMARY:Fuxenbummel
+DESCRIPTION:Beginn 18:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-007@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261023T200000
+DTEND;TZID=Europe/Berlin:20261024T000000
+SUMMARY:Casino-Abend auf dem Ravensberghaus
+DESCRIPTION:Beginn 20:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-008@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261024T200000
+DTEND;TZID=Europe/Berlin:20261025T000000
+SUMMARY:Semesterankneipe mit Flaggehissen
+DESCRIPTION:Beginn 20:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-009@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261030T190000
+DTEND;TZID=Europe/Berlin:20261030T220000
+SUMMARY:„Schlag den Raab“-Abend mit e.v. ATV Westmark
+DESCRIPTION:Beginn 19:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-010@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261102T200000
+DTEND;TZID=Europe/Berlin:20261102T220000
+SUMMARY:2. Aktivenconvent
+DESCRIPTION:Beginn 20:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-011@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261104T160000
+DTEND;TZID=Europe/Berlin:20261104T190000
+SUMMARY:1. Arbeitstag zur Beach Party
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-012@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261111T160000
+DTEND;TZID=Europe/Berlin:20261111T190000
+SUMMARY:2. Arbeitstag zur Beach Party
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-013@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261116
+TRANSP:TRANSPARENT
+SUMMARY:Aktivenfahrt zum 70. Schlosskommers nach Heidelberg
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+LOCATION:Heidelberg
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-014@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261117T160000
+DTEND;TZID=Europe/Berlin:20261117T190000
+SUMMARY:3. Arbeitstag zur Beach Party
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-015@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261118T160000
+DTEND;TZID=Europe/Berlin:20261118T190000
+SUMMARY:4. Arbeitstag zur Beach Party
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-016@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261120T200000
+DTEND;TZID=Europe/Berlin:20261121T010000
+SUMMARY:Beach Party auf dem Ravensberghaus
+DESCRIPTION:Beginn 20:00 c.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-017@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261124T160000
+DTEND;TZID=Europe/Berlin:20261124T190000
+SUMMARY:Arbeitstag zur Nachbereitung (Beach Party)
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-018@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261125T180000
+DTEND;TZID=Europe/Berlin:20261125T200000
+SUMMARY:Gemeinsame Fuxenstunde mit e.v. ATV Westmark
+DESCRIPTION:Beginn 18:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-019@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261126T160000
+DTEND;TZID=Europe/Berlin:20261126T190000
+SUMMARY:Arbeitstag zur Nachbereitung (Beach Party)
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-020@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+TRANSP:TRANSPARENT
+SUMMARY:„Trinken für einen guten Zweck“
+DESCRIPTION:Erhöhung der Getränkepreise adh. mit Stiftung des Erlöses an
+  die Münsteraner Caritas\nQuelle: Semesterprogramm KStV Ravensberg WiSe 2
+ 026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-021@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261205T200000
+DTEND;TZID=Europe/Berlin:20261206T000000
+SUMMARY:Nikolauskneipe
+DESCRIPTION:Beginn 20:00 c.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-022@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261207T200000
+DTEND;TZID=Europe/Berlin:20261207T220000
+SUMMARY:3. Aktivenconvent
+DESCRIPTION:Beginn 20:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-023@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261212T190000
+DTEND;TZID=Europe/Berlin:20261212T230000
+SUMMARY:Christbaumschmücken mit anschl. Cocktailabend zugunsten der Kinder
+ krebshilfe
+DESCRIPTION:Beginn 19:00 c.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-024@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20261218T190000
+DTEND;TZID=Europe/Berlin:20261218T220000
+SUMMARY:Feuerzangenbowle mit e.S.V. KStV Germania
+DESCRIPTION:Beginn 19:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-025@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+TRANSP:TRANSPARENT
+SUMMARY:Beginn der Weihnachtspause
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-026@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+TRANSP:TRANSPARENT
+SUMMARY:Fortsetzung der Vorlesungen
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-027@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270111T200000
+DTEND;TZID=Europe/Berlin:20270111T230000
+SUMMARY:4. Aktivenconvent\, anschl. Wahlconvent
+DESCRIPTION:Beginn 20:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-028@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270118
+TRANSP:TRANSPARENT
+SUMMARY:Winterfest
+DESCRIPTION:Festfolge s. Seite 4 im SemPro. Gäste willkommen\nQuelle: Seme
+ sterprogramm KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-029@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270115T193000
+DTEND;TZID=Europe/Berlin:20270115T230000
+SUMMARY:Winterfest: Gemeinsamer Begrüßungsabend
+DESCRIPTION:Beginn 19:30 s.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-030@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270116T143000
+DTEND;TZID=Europe/Berlin:20270116T170000
+SUMMARY:Winterfest: Damen- und Kinderprogramm
+DESCRIPTION:Beginn 14:30 s.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-031@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270116T143000
+DTEND;TZID=Europe/Berlin:20270116T173000
+SUMMARY:Winterfest: Cumulativconvent
+DESCRIPTION:Beginn 14:30 s.t.\nIm Anschluss: AHV- und HBV-Convente (MV Alth
+ errenverein 15:30\, MV Verein Studentenwohnheim 16:30)\nQuelle: Semesterpr
+ ogramm KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-032@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270116T193000
+DTEND;TZID=Europe/Berlin:20270116T200000
+SUMMARY:Winterfest: Sektempfang
+DESCRIPTION:Beginn 19:30 s.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-033@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270116T200000
+DTEND;TZID=Europe/Berlin:20270117T000000
+SUMMARY:Winterfest: Festkommers
+DESCRIPTION:Beginn 20:00 s.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-034@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270117T000000
+DTEND;TZID=Europe/Berlin:20270117T030000
+SUMMARY:Winterfest: Fidulitas auf dem Ravensberghaus
+DESCRIPTION:Beginn 00:00 c.t.\nIm SemPro: 24.00 c.t. (Samstagnacht). Gäste
+  willkommen\nQuelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-035@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270117T103000
+DTEND;TZID=Europe/Berlin:20270117T120000
+SUMMARY:Winterfest: Heilige Messe in der Heilig-Kreuz-Kirche
+DESCRIPTION:Beginn 10:30 s.t.\nGäste willkommen\nQuelle: Semesterprogramm 
+ KStV Ravensberg WiSe 2026/27
+LOCATION:Heilig-Kreuz-Kirche\, Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-036@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270117T130000
+DTEND;TZID=Europe/Berlin:20270117T150000
+SUMMARY:Winterfest: Gemeinsames Mittagessen im Nordstern
+DESCRIPTION:Beginn 13:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Nordstern\, Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-037@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270126T160000
+DTEND;TZID=Europe/Berlin:20270126T180000
+SUMMARY:Besuch des Planetariums in Münster mit AHX Jonas Kemper
+DESCRIPTION:Beginn 16:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Planetarium Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-038@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270201T200000
+DTEND;TZID=Europe/Berlin:20270201T230000
+SUMMARY:5. Aktivenconvent\, anschl. Dechargierungsconvent
+DESCRIPTION:Beginn 20:00 s.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-039@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270202T190000
+DTEND;TZID=Europe/Berlin:20270202T220000
+SUMMARY:Semesterabgottesdienst in der St. Lamberti-Kirche
+DESCRIPTION:Beginn 19:00 s.t.\nAnschl. Fidulitas bei e.v. Markomannia\nQuel
+ le: Semesterprogramm KStV Ravensberg WiSe 2026/27
+LOCATION:St. Lamberti-Kirche\, Lambertikirchplatz\, 48143 Münster
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-040@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270206
+TRANSP:TRANSPARENT
+SUMMARY:Vorlesungsende
+DESCRIPTION:Quelle: Semesterprogramm KStV Ravensberg WiSe 2026/27
+END:VEVENT
+BEGIN:VEVENT
+UID:ravensberg-ws2627-041@kstv-ravensberg.de
+DTSTAMP:20260921T160000Z
+DTSTART;TZID=Europe/Berlin:20270227T200000
+DTEND;TZID=Europe/Berlin:20270228T000000
+SUMMARY:Semesterabkneipe mit Flaggeeinholen
+DESCRIPTION:Beginn 20:00 c.t.\nQuelle: Semesterprogramm KStV Ravensberg WiS
+ e 2026/27
+LOCATION:Ravensberghaus\, Raesfeldstraße 32\, 48149 Münster
+END:VEVENT
+END:VCALENDAR

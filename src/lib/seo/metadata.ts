@@ -11,7 +11,7 @@ interface PageSEOProps {
 const siteConfig = {
   name: "KStV Ravensberg",
   fullName: "KStV Ravensberg zu Münster",
-  url: "https://kstvravensberg.de",
+  url: "https://kstv-ravensberg.de",
   description:
     "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
   defaultImage: "/images/og-image.png",

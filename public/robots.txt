@@ -1,11 +1,11 @@
-# robots.txt for kstvravensberg.de
+# robots.txt for kstv-ravensberg.de
 
 User-agent: *
 Allow: /
 Disallow: /_next/
 
 # Sitemap location
-Sitemap: https://kstvravensberg.de/sitemap.xml
+Sitemap: https://kstv-ravensberg.de/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

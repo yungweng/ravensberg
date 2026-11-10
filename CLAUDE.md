@@ -221,6 +221,12 @@ Additional workflow: `.github/workflows/refresh-instagram-token.yml` auto-refres
 
 Deploy target: `~/domains/kstvravensberg.de/public_html/` on the Hostinger server.
 
+### IONOS (primary domain)
+
+The canonical domain is **kstv-ravensberg.de**, hosted on IONOS webspace. `.github/workflows/deploy-ionos.yml` builds the same way and rsyncs `out/` to the `kstvravensberg/` folder there (same triggers as `deploy.yml`). Required secrets: `IONOS_SSH_PRIVATE_KEY`, `IONOS_SSH_HOST`, `IONOS_SSH_USERNAME`, `IONOS_SSH_PORT`, `IONOS_REMOTE_PATH`. The Hostinger deploy for the old `kstvravensberg.de` keeps running in parallel.
+
+In the IONOS panel the domain must be connected to the webspace folder `/kstvravensberg` (Domains & SSL → Verwendungsart). A WordPress project on the same account once claimed the domain and overrode that mapping (403 on `/`); it has been uninstalled.
+
 ### Post-deploy: Hostinger CDN cache
 
 After deploying new content, **Hostinger's CDN/LiteSpeed cache may serve stale content**. If the site looks broken after a deploy (missing styles, broken images), purge the cache:

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
 
-const BASE_URL = "https://kstvravensberg.de";
+const BASE_URL = "https://kstv-ravensberg.de";
 
 const BUILD_DATE = new Date().toISOString();
 

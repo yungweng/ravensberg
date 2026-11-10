@@ -41,19 +41,19 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://kstvravensberg.de"),
+  metadataBase: new URL("https://kstv-ravensberg.de"),
   alternates: {
-    canonical: "https://kstvravensberg.de/",
+    canonical: "https://kstv-ravensberg.de/",
   },
   openGraph: {
     title: "KStV Ravensberg – Studentenverbindung in Münster | Seit 1919",
     description:
       "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919. Religio, Scientia, Amicitia.",
-    url: "https://kstvravensberg.de",
+    url: "https://kstv-ravensberg.de",
     siteName: "KStV Ravensberg zu Münster",
     images: [
       {
-        url: "https://kstvravensberg.de/images/og-image.png",
+        url: "https://kstv-ravensberg.de/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Wappen des KStV Ravensberg zu Münster",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "KStV Ravensberg zu Münster",
     description:
       "Katholische Studentenverbindung an der Universität Münster. Seit 1919.",
-    images: ["https://kstvravensberg.de/images/og-image.png"],
+    images: ["https://kstv-ravensberg.de/images/og-image.png"],
   },
   robots: {
     index: true,

@@ -4,8 +4,8 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "KStV Ravensberg zu Münster",
     alternateName: "KStV Ravensberg",
-    url: "https://kstvravensberg.de",
-    logo: "https://kstvravensberg.de/images/wappen/vollwappen.webp",
+    url: "https://kstv-ravensberg.de",
+    logo: "https://kstv-ravensberg.de/images/wappen/vollwappen.webp",
     description:
       "Katholische, nichtschlagende, farbenführende Studentenverbindung im Kartellverband (KV) an der Universität Münster. Gegründet 1919.",
     address: {
@@ -99,7 +99,7 @@ export function generateLocalBusinessSchema() {
     name: "Ravensberg-Haus",
     description:
       "Vereinshaus des KStV Ravensberg zu Münster im Kreuzviertel",
-    url: "https://kstvravensberg.de",
+    url: "https://kstv-ravensberg.de",
     email: "vorstand@kstv-ravensberg.de",
     address: {
       "@type": "PostalAddress",

@@ -1,0 +1,6 @@
+# Old domain -> canonical domain. The same build is deployed to Hostinger
+# (kstvravensberg.de) and IONOS (kstv-ravensberg.de); the host condition makes
+# this a no-op on IONOS.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?kstvravensberg\.de$ [NC]
+RewriteRule ^(.*)$ https://kstv-ravensberg.de/$1 [R=301,L]

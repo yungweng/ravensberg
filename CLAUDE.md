@@ -223,7 +223,7 @@ Deploy target: `~/domains/kstvravensberg.de/public_html/` on the Hostinger serve
 
 ### IONOS (primary domain)
 
-The canonical domain is **kstv-ravensberg.de**, hosted on IONOS webspace. `.github/workflows/deploy-ionos.yml` builds the same way and rsyncs `out/` to the `kstvravensberg/` folder there (same triggers as `deploy.yml`). Required secrets: `IONOS_SSH_PRIVATE_KEY`, `IONOS_SSH_HOST`, `IONOS_SSH_USERNAME`, `IONOS_SSH_PORT`, `IONOS_REMOTE_PATH`. The Hostinger deploy for the old `kstvravensberg.de` keeps running in parallel.
+The canonical domain is **kstv-ravensberg.de**, hosted on IONOS webspace. `.github/workflows/deploy-ionos.yml` builds the same way and rsyncs `out/` to the `kstvravensberg/` folder there (same triggers as `deploy.yml`). Required secrets: `IONOS_SSH_PRIVATE_KEY`, `IONOS_SSH_HOST`, `IONOS_SSH_USERNAME`, `IONOS_SSH_PORT`, `IONOS_REMOTE_PATH`. The Hostinger deploy for the old `kstvravensberg.de` keeps running in parallel, but `public/.htaccess` 301-redirects that host (path preserved) to `kstv-ravensberg.de`. The rule is host-conditional, so the same file is a no-op on IONOS.
 
 In the IONOS panel the domain must be connected to the webspace folder `/kstvravensberg` (Domains & SSL → Verwendungsart). A WordPress project on the same account once claimed the domain and overrode that mapping (403 on `/`); it has been uninstalled.
 
